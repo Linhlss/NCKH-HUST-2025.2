@@ -1,0 +1,12 @@
+{
+  "tenant_id": "default",
+  "collection_name": "tenant_default_docs",
+  "data_signature": "d77c3eee42e13e61c4009404ebc68e09f5a709583e3ee49df4f642a3447c54bb",
+  "updated_at": "2026-03-08 23:01:01",
+  "document_count": 66,
+  "node_count": 7495,
+  "chunk_size": 700,
+  "chunk_overlap": 120,
+  "embed_model": "BAAI/bge-small-en-v1.5",
+  "top_k": 5
+}

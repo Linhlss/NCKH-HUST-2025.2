@@ -15,13 +15,8 @@ from config import (
     load_tenant_configs,
     save_tenant_configs,
 )
-from memory_store import MemoryStore
 from models import TenantProfile
-from prompt_builder import append_sources, build_augmented_prompt
-from retrieval import retrieve_context
-from runtime_manager import get_runtime
-from tools import detect_direct_tool
-from utils import normalize_question, sanitize_id
+from utils import sanitize_id
 
 logger = logging.getLogger(__name__)
 
@@ -80,35 +75,17 @@ def complete_with_retry(llm: Ollama, prompt: str) -> str:
     raise RuntimeError(f"Ollama thất bại sau nhiều lần thử: {last_error}")
 
 
-def answer_with_augmented_llm(
-    profile: TenantProfile,
-    user_id: str,
-    question: str,
-    show_sources: bool = True,
-) -> str:
-    question = normalize_question(question)
+def draft_answer(llm: Ollama, prompt: str) -> str:
+    return complete_with_retry(llm, prompt)
 
-    direct = detect_direct_tool(question, profile, user_id)
-    if direct:
-        return direct
 
-    runtime = get_runtime(profile)
-    memory = MemoryStore(profile.tenant_id, user_id)
+def rewrite_query(llm: Ollama, prompt: str) -> str:
+    return complete_with_retry(llm, prompt)
 
-    retrieved_context, sources = retrieve_context(runtime, question)
 
-    prompt = build_augmented_prompt(
-        profile=profile,
-        question=question,
-        memory_text=memory.load(profile.memory_turns),
-        retrieved_context=retrieved_context,
-        tool_result="Không có công cụ trực tiếp được kích hoạt.",
-    )
+def verify_answer(llm: Ollama, prompt: str) -> str:
+    return complete_with_retry(llm, prompt)
 
-    llm = get_llm(profile.model_name)
-    answer = complete_with_retry(llm, prompt)
-    answer = append_sources(answer, sources, show_sources)
 
-    memory.append("user", question)
-    memory.append("assistant", answer)
-    return answer
+def rewrite_style(llm: Ollama, prompt: str) -> str:
+    return complete_with_retry(llm, prompt)

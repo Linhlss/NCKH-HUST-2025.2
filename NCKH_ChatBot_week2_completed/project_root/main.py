@@ -5,7 +5,8 @@ import os
 from typing import Any, Dict, Optional
 
 from config import AUTO_REFRESH_MINUTES, bootstrap_dirs, ensure_default_config, init_embedding_settings
-from llm_service import get_or_create_profile, answer_with_augmented_llm
+from llm_service import get_or_create_profile
+from workflow import run_workflow
 from tools import handle_slash_command
 from runtime_manager import build_runtime
 from utils import BackgroundScheduler, HAS_PSUTIL, HAS_SCHEDULER, check_ollama_alive
@@ -115,7 +116,7 @@ def main() -> None:
 
             print("AI đang phân tích...", end="\r")
             try:
-                answer = answer_with_augmented_llm(
+                answer = run_workflow(
                     profile=profile,
                     user_id=state["user_id"],
                     question=question,

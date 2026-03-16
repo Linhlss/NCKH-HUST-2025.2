@@ -31,16 +31,24 @@ def file_hints_from_question(question: str) -> List[str]:
     return [p.lower() for p in patterns]
 
 
-def prioritize_nodes_by_file_hint(nodes: List[Any], hints: List[str]) -> List[Any]:
-    if not hints:
+def _tokenize(text: str) -> set[str]:
+    return set(re.findall(r"\w+", text.lower()))
+
+
+def prioritize_nodes_by_file_hint(nodes: List[Any], hints: List[str], query: str = "") -> List[Any]:
+    if not hints and not query:
         return nodes
 
-    def score_item(item: Any) -> Tuple[int, float]:
+    query_terms = _tokenize(query)
+
+    def score_item(item: Any) -> Tuple[int, int, float]:
         meta = extract_node_metadata(item)
         file_name = str(meta.get("file_name") or meta.get("source_ref") or "").lower()
         matched = any(h in file_name for h in hints)
+        text = extract_node_text(item)[:1200]
+        overlap = len(query_terms & _tokenize(text)) if query_terms else 0
         raw_score = float(getattr(item, "score", 0.0) or 0.0)
-        return (1 if matched else 0, raw_score)
+        return (1 if matched else 0, overlap, raw_score)
 
     return sorted(nodes, key=score_item, reverse=True)
 
@@ -61,14 +69,15 @@ def format_source(meta: Dict[str, Any], score: float) -> str:
     return " | ".join(parts)
 
 
-def retrieve_context(runtime: TenantRuntime, question: str) -> Tuple[str, List[str]]:
+def retrieve_context(runtime: TenantRuntime, question: str, retrieval_query: str | None = None) -> Tuple[str, List[str]]:
+    effective_query = retrieval_query or question
     try:
-        raw_nodes = runtime.retriever.retrieve(question)
+        raw_nodes = runtime.retriever.retrieve(effective_query)
     except Exception:
         return "", []
 
     hints = file_hints_from_question(question)
-    nodes = prioritize_nodes_by_file_hint(list(raw_nodes), hints)
+    nodes = prioritize_nodes_by_file_hint(list(raw_nodes), hints, effective_query)
 
     context_blocks: List[str] = []
     sources: List[str] = []

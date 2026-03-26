@@ -1,0 +1,14 @@
+{
+  "tenant_id": "default",
+  "collection_name": "tenant_default",
+  "data_signature": "4667bd696c38d8a514a9d84b480a5948d9bb9d9e419b6ce53ce2e5ed197e1125",
+  "updated_at": "2026-03-25 11:05:39",
+  "document_count": 66,
+  "node_count": 185,
+  "chunk_size": 700,
+  "chunk_overlap": 120,
+  "embed_model": "intfloat/multilingual-e5-base",
+  "top_k": 5,
+  "model_name": "llama3",
+  "ollama_timeout": 360.0
+}

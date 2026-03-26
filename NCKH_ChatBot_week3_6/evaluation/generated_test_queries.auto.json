@@ -1,0 +1,334 @@
+[
+  {
+    "id": "default_qcdt_2021_upload_pdf_01",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT-2021-upload.pdf nói về nội dung chính gì?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "easy",
+    "relevant_docs": [
+      "QCDT-2021-upload.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "tiến"
+    ]
+  },
+  {
+    "id": "default_qcdt_2021_upload_pdf_02",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT-2021-upload.pdf có nhắc đến điều không?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "easy",
+    "relevant_docs": [
+      "QCDT-2021-upload.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "tiến"
+    ]
+  },
+  {
+    "id": "default_qcdt_2021_upload_pdf_03",
+    "tenant_id": "default",
+    "query": "Các chủ đề nổi bật trong QCDT-2021-upload.pdf là gì?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "QCDT-2021-upload.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "tiến"
+    ]
+  },
+  {
+    "id": "default_qcdt_2021_upload_pdf_04",
+    "tenant_id": "default",
+    "query": "Hãy tóm tắt ngắn tài liệu QCDT-2021-upload.pdf.",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "QCDT-2021-upload.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "tiến"
+    ]
+  },
+  {
+    "id": "default_qcdt_2021_upload_pdf_05",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT-2021-upload.pdf có thông tin nào liên quan đến chương?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "hard",
+    "relevant_docs": [
+      "QCDT-2021-upload.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "tiến"
+    ]
+  },
+  {
+    "id": "default_qcdt_2021_upload_pdf_06",
+    "tenant_id": "default",
+    "query": "Trong QCDT-2021-upload.pdf, thông tin nào liên quan đến luận?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "hard",
+    "relevant_docs": [
+      "QCDT-2021-upload.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "tiến"
+    ]
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_01",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT_2025_5445_QD-DHBK.pdf nói về nội dung chính gì?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "easy",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "ngày",
+      "chương",
+      "tháng"
+    ]
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_02",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT_2025_5445_QD-DHBK.pdf có nhắc đến điều không?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "easy",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "ngày",
+      "chương",
+      "tháng"
+    ]
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_03",
+    "tenant_id": "default",
+    "query": "Các chủ đề nổi bật trong QCDT_2025_5445_QD-DHBK.pdf là gì?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "ngày",
+      "chương",
+      "tháng"
+    ]
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_04",
+    "tenant_id": "default",
+    "query": "Hãy tóm tắt ngắn tài liệu QCDT_2025_5445_QD-DHBK.pdf.",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "ngày",
+      "chương",
+      "tháng"
+    ]
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_05",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT_2025_5445_QD-DHBK.pdf có thông tin nào liên quan đến ngày?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "hard",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "ngày",
+      "chương",
+      "tháng"
+    ]
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_06",
+    "tenant_id": "default",
+    "query": "Trong QCDT_2025_5445_QD-DHBK.pdf, thông tin nào liên quan đến chương?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "hard",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "ngày",
+      "chương",
+      "tháng"
+    ]
+  },
+  {
+    "id": "default_tkb20252_full_xlsx_01",
+    "tenant_id": "default",
+    "query": "File TKB20252-FULL.xlsx có những cột dữ liệu chính nào?",
+    "expected_route": "tool",
+    "category": "timetable",
+    "difficulty": "easy",
+    "relevant_docs": [
+      "TKB20252-FULL.xlsx"
+    ],
+    "expected_keywords": [
+      "THỜI KHÓA BIỂU DỰ KIẾN KỲ 20252 - CẬP NHẬT NGÀY 17.01.2026",
+      "Unnamed: 1",
+      "Unnamed: 2",
+      "Unnamed: 3"
+    ]
+  },
+  {
+    "id": "default_tkb20252_full_xlsx_02",
+    "tenant_id": "default",
+    "query": "Sheet đầu tiên hoặc bảng đầu tiên của TKB20252-FULL.xlsx chứa loại dữ liệu gì?",
+    "expected_route": "tool",
+    "category": "timetable",
+    "difficulty": "easy",
+    "relevant_docs": [
+      "TKB20252-FULL.xlsx"
+    ],
+    "expected_keywords": [
+      "THỜI KHÓA BIỂU DỰ KIẾN KỲ 20252 - CẬP NHẬT NGÀY 17.01.2026",
+      "Unnamed: 1",
+      "Unnamed: 2",
+      "Unnamed: 3"
+    ]
+  },
+  {
+    "id": "default_tkb20252_full_xlsx_03",
+    "tenant_id": "default",
+    "query": "Trong file TKB20252-FULL.xlsx, trường THỜI KHÓA BIỂU DỰ KIẾN KỲ 20252 - CẬP NHẬT NGÀY 17.01.2026 có giá trị mẫu nào như Kỳ?",
+    "expected_route": "tool",
+    "category": "timetable",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "TKB20252-FULL.xlsx"
+    ],
+    "expected_keywords": [
+      "THỜI KHÓA BIỂU DỰ KIẾN KỲ 20252 - CẬP NHẬT NGÀY 17.01.2026",
+      "Unnamed: 1",
+      "Unnamed: 2",
+      "Unnamed: 3"
+    ]
+  },
+  {
+    "id": "default_tkb20252_full_xlsx_04",
+    "tenant_id": "default",
+    "query": "Trong file TKB20252-FULL.xlsx, trường Unnamed: 1 có giá trị mẫu nào như Trường_Viện_Khoa?",
+    "expected_route": "tool",
+    "category": "timetable",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "TKB20252-FULL.xlsx"
+    ],
+    "expected_keywords": [
+      "THỜI KHÓA BIỂU DỰ KIẾN KỲ 20252 - CẬP NHẬT NGÀY 17.01.2026",
+      "Unnamed: 1",
+      "Unnamed: 2",
+      "Unnamed: 3"
+    ]
+  },
+  {
+    "id": "default_tkb20252_full_xlsx_05",
+    "tenant_id": "default",
+    "query": "Hãy tìm thông tin liên quan đến giá trị Kỳ trong file TKB20252-FULL.xlsx.",
+    "expected_route": "tool",
+    "category": "timetable",
+    "difficulty": "hard",
+    "relevant_docs": [
+      "TKB20252-FULL.xlsx"
+    ],
+    "expected_keywords": [
+      "THỜI KHÓA BIỂU DỰ KIẾN KỲ 20252 - CẬP NHẬT NGÀY 17.01.2026",
+      "Unnamed: 1",
+      "Unnamed: 2",
+      "Unnamed: 3"
+    ]
+  },
+  {
+    "id": "default_tkb20252_full_xlsx_06",
+    "tenant_id": "default",
+    "query": "File TKB20252-FULL.xlsx có cột nào dùng để lưu THỜI KHÓA BIỂU DỰ KIẾN KỲ 20252 - CẬP NHẬT NGÀY 17.01.2026 không?",
+    "expected_route": "tool",
+    "category": "timetable",
+    "difficulty": "hard",
+    "relevant_docs": [
+      "TKB20252-FULL.xlsx"
+    ],
+    "expected_keywords": [
+      "THỜI KHÓA BIỂU DỰ KIẾN KỲ 20252 - CẬP NHẬT NGÀY 17.01.2026",
+      "Unnamed: 1",
+      "Unnamed: 2",
+      "Unnamed: 3"
+    ]
+  },
+  {
+    "id": "default_tkb20252_full_xlsx_07",
+    "tenant_id": "default",
+    "query": "Tài liệu ~$TKB20252-FULL.xlsx chứa nội dung gì?",
+    "expected_route": "retrieval",
+    "category": "timetable",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "~$TKB20252-FULL.xlsx"
+    ],
+    "expected_keywords": [],
+    "notes": "fallback after parsing error: Excel file format cannot be determined, you must specify an engine manually."
+  },
+  {
+    "id": "default_https_fami_hust_edu_vn_01",
+    "tenant_id": "default",
+    "query": "Tài liệu https://fami.hust.edu.vn/ chứa nội dung gì?",
+    "expected_route": "retrieval",
+    "category": "web_content",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "https://fami.hust.edu.vn/"
+    ],
+    "expected_keywords": [],
+    "notes": "fallback after parsing error: HTTPSConnectionPool(host='fami.hust.edu.vn', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='fami.hust.edu.vn', port=443): Failed to resolve 'fami.hust.edu.vn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+  }
+]

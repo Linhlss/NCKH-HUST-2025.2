@@ -4,7 +4,18 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from project_root.config import DEFAULT_MODEL_NAME, DEFAULT_TOP_K
+from project_root.config import (
+    CHUNK_OVERLAP,
+    CHUNK_SIZE,
+    DEFAULT_ENABLE_HYBRID_RETRIEVAL,
+    DEFAULT_ENABLE_QUERY_EXPANSION,
+    DEFAULT_ENABLE_RERANKER,
+    DEFAULT_HYBRID_ALPHA,
+    DEFAULT_MODEL_NAME,
+    DEFAULT_QUERY_EXPANSION_COUNT,
+    DEFAULT_RERANKER_TOP_N,
+    DEFAULT_TOP_K,
+)
 
 
 @dataclass
@@ -17,6 +28,14 @@ class TenantProfile:
     memory_turns: int = 6
     model_name: str = DEFAULT_MODEL_NAME
     adapter_name: str = "base"
+    chunk_size: int = CHUNK_SIZE
+    chunk_overlap: int = CHUNK_OVERLAP
+    enable_query_expansion: bool = DEFAULT_ENABLE_QUERY_EXPANSION
+    enable_hybrid_retrieval: bool = DEFAULT_ENABLE_HYBRID_RETRIEVAL
+    enable_reranker: bool = DEFAULT_ENABLE_RERANKER
+    query_expansion_count: int = DEFAULT_QUERY_EXPANSION_COUNT
+    hybrid_alpha: float = DEFAULT_HYBRID_ALPHA
+    reranker_top_n: int = DEFAULT_RERANKER_TOP_N
 
 
 @dataclass
@@ -31,3 +50,5 @@ class TenantRuntime:
     loaded_at: str
     document_count: int
     node_count: int
+    corpus_nodes: list[dict]
+    hybrid_retriever: Any | None = None

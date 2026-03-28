@@ -14,9 +14,8 @@ from llama_index.core import StorageContext, VectorStoreIndex
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.vector_stores.chroma import ChromaVectorStore
 
+from hybrid_retrieval import HybridRetriever
 from project_root.config import (
-    CHUNK_OVERLAP,
-    CHUNK_SIZE,
     DEFAULT_EMBED_MODEL,
     OLLAMA_TIMEOUT,
     STORAGE_ROOT,
@@ -30,20 +29,24 @@ logger = logging.getLogger(__name__)
 RUNTIME_CACHE: Dict[str, TenantRuntime] = {}
 
 
-def tenant_storage_dir(tenant_id: str) -> Path:
-    p = STORAGE_ROOT / tenant_id
+def _storage_key(profile: TenantProfile) -> str:
+    return f"{profile.tenant_id}__c{int(profile.chunk_size)}_o{int(profile.chunk_overlap)}"
+
+
+def tenant_storage_dir(profile: TenantProfile) -> Path:
+    p = STORAGE_ROOT / _storage_key(profile)
     p.mkdir(parents=True, exist_ok=True)
     return p
 
 
-def tenant_chroma_dir(tenant_id: str) -> Path:
-    p = tenant_storage_dir(tenant_id) / "chroma_db"
+def tenant_chroma_dir(profile: TenantProfile) -> Path:
+    p = tenant_storage_dir(profile) / "chroma_db"
     p.mkdir(parents=True, exist_ok=True)
     return p
 
 
-def tenant_meta_file(tenant_id: str) -> Path:
-    return tenant_storage_dir(tenant_id) / "index_meta.json"
+def tenant_meta_file(profile: TenantProfile) -> Path:
+    return tenant_storage_dir(profile) / "index_meta.json"
 
 
 def _create_vector_components(chroma_dir: Path, collection_name: str):
@@ -74,10 +77,15 @@ def _can_load_existing_index(
     force_rebuild: bool,
     existing_meta: Dict[str, Any],
     sig: str,
+    profile: TenantProfile,
 ) -> bool:
     if force_rebuild:
         return False
     if existing_meta.get("data_signature") != sig:
+        return False
+    if int(existing_meta.get("chunk_size", 0) or 0) != int(profile.chunk_size):
+        return False
+    if int(existing_meta.get("chunk_overlap", 0) or 0) != int(profile.chunk_overlap):
         return False
     if not chroma_dir.exists():
         return False
@@ -115,7 +123,7 @@ def _build_new_index(
     if not docs:
         raise RuntimeError("Không có dữ liệu để lập chỉ mục.")
 
-    splitter = SentenceSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
+    splitter = SentenceSplitter(chunk_size=profile.chunk_size, chunk_overlap=profile.chunk_overlap)
     nodes = splitter.get_nodes_from_documents(docs)
 
     try:
@@ -143,8 +151,8 @@ def _build_new_index(
         "updated_at": now_str(),
         "document_count": document_count,
         "node_count": node_count,
-        "chunk_size": CHUNK_SIZE,
-        "chunk_overlap": CHUNK_OVERLAP,
+        "chunk_size": profile.chunk_size,
+        "chunk_overlap": profile.chunk_overlap,
         "embed_model": DEFAULT_EMBED_MODEL,
         "top_k": profile.top_k,
         "model_name": profile.model_name,
@@ -158,14 +166,39 @@ def _build_new_index(
     return index, document_count, node_count
 
 
+def _build_corpus_nodes(profile: TenantProfile) -> list[dict]:
+    docs = collect_documents(profile.tenant_id)
+    if not docs:
+        return []
+
+    splitter = SentenceSplitter(chunk_size=profile.chunk_size, chunk_overlap=profile.chunk_overlap)
+    nodes = splitter.get_nodes_from_documents(docs)
+    records: list[dict] = []
+    for node in nodes:
+        text = ""
+        try:
+            text = node.get_content().strip()
+        except Exception:
+            text = ""
+        metadata = dict(getattr(node, "metadata", {}) or {})
+        records.append(
+            {
+                "id": str(getattr(node, "node_id", "")),
+                "content": text,
+                "metadata": metadata,
+            }
+        )
+    return records
+
+
 def build_runtime(profile: TenantProfile, force_rebuild: bool = False) -> TenantRuntime:
     start_time = time.time()
     start_ram = get_ram_usage()
 
     sig = compute_data_signature(profile.tenant_id)
-    chroma_dir = tenant_chroma_dir(profile.tenant_id)
-    meta_file = tenant_meta_file(profile.tenant_id)
-    collection_name = f"tenant_{profile.tenant_id}"
+    chroma_dir = tenant_chroma_dir(profile)
+    meta_file = tenant_meta_file(profile)
+    collection_name = f"tenant_{_storage_key(profile)}"
 
     existing_meta: Dict[str, Any] = {}
     if meta_file.exists():
@@ -180,6 +213,7 @@ def build_runtime(profile: TenantProfile, force_rebuild: bool = False) -> Tenant
         force_rebuild=force_rebuild,
         existing_meta=existing_meta,
         sig=sig,
+        profile=profile,
     )
 
     if should_load_existing:
@@ -202,17 +236,22 @@ def build_runtime(profile: TenantProfile, force_rebuild: bool = False) -> Tenant
             sig=sig,
         )
 
+    corpus_nodes = _build_corpus_nodes(profile)
+    hybrid_retriever = HybridRetriever(corpus_nodes) if corpus_nodes else None
+
     runtime = TenantRuntime(
         profile=profile,
         index=index,
         retriever=index.as_retriever(similarity_top_k=profile.top_k),
-        storage_dir=tenant_storage_dir(profile.tenant_id),
+        storage_dir=tenant_storage_dir(profile),
         chroma_dir=chroma_dir,
         collection_name=collection_name,
         data_signature=sig,
         loaded_at=now_str(),
         document_count=document_count,
         node_count=node_count,
+        corpus_nodes=corpus_nodes,
+        hybrid_retriever=hybrid_retriever,
     )
 
     elapsed = time.time() - start_time
@@ -235,8 +274,16 @@ def build_runtime(profile: TenantProfile, force_rebuild: bool = False) -> Tenant
 def get_runtime(profile: TenantProfile) -> TenantRuntime:
     tenant_id = profile.tenant_id
 
-    if tenant_id in RUNTIME_CACHE:
-        return RUNTIME_CACHE[tenant_id]
+    cached = RUNTIME_CACHE.get(tenant_id)
+    if cached:
+        same_profile = (
+            int(cached.profile.chunk_size) == int(profile.chunk_size)
+            and int(cached.profile.chunk_overlap) == int(profile.chunk_overlap)
+        )
+        if same_profile:
+            cached.profile = profile
+            cached.retriever = cached.index.as_retriever(similarity_top_k=profile.top_k)
+            return cached
 
     runtime = build_runtime(profile, force_rebuild=False)
     RUNTIME_CACHE[tenant_id] = runtime

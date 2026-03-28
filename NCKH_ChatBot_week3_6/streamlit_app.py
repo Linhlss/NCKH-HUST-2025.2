@@ -727,6 +727,11 @@ with tab_tenants:
                     "model_name": cfg.get("model_name", "llama3"),
                     "adapter_name": cfg.get("adapter_name", "base"),
                     "top_k": cfg.get("top_k", 4),
+                    "chunk_size": cfg.get("chunk_size", 700),
+                    "chunk_overlap": cfg.get("chunk_overlap", 120),
+                    "query_expansion": cfg.get("enable_query_expansion", False),
+                    "hybrid": cfg.get("enable_hybrid_retrieval", False),
+                    "reranker": cfg.get("enable_reranker", False),
                     "memory_turns": cfg.get("memory_turns", 6),
                 }
                 for tenant_id, cfg in sorted(tenant_configs.items())
@@ -741,11 +746,35 @@ with tab_tenants:
         model_name = st.text_input("Model name", value=current_cfg.get("model_name", "llama3"))
         adapter_name = st.text_input("Adapter name", value=current_cfg.get("adapter_name", "base"))
         top_k = st.number_input("Top K", min_value=1, max_value=20, value=int(current_cfg.get("top_k", 4)))
+        chunk_size = st.number_input("Chunk size", min_value=128, max_value=2000, value=int(current_cfg.get("chunk_size", 700)), step=50)
+        chunk_overlap = st.number_input("Chunk overlap", min_value=0, max_value=500, value=int(current_cfg.get("chunk_overlap", 120)), step=10)
         memory_turns = st.number_input(
             "Memory turns",
             min_value=1,
             max_value=30,
             value=int(current_cfg.get("memory_turns", 6)),
+        )
+        enable_query_expansion = st.checkbox("Enable query expansion", value=bool(current_cfg.get("enable_query_expansion", False)))
+        enable_hybrid_retrieval = st.checkbox("Enable hybrid retrieval", value=bool(current_cfg.get("enable_hybrid_retrieval", False)))
+        enable_reranker = st.checkbox("Enable reranker", value=bool(current_cfg.get("enable_reranker", False)))
+        query_expansion_count = st.number_input(
+            "Query expansion count",
+            min_value=1,
+            max_value=8,
+            value=int(current_cfg.get("query_expansion_count", 4)),
+        )
+        hybrid_alpha = st.number_input(
+            "Hybrid alpha",
+            min_value=0.0,
+            max_value=1.0,
+            value=float(current_cfg.get("hybrid_alpha", 0.55)),
+            step=0.05,
+        )
+        reranker_top_n = st.number_input(
+            "Reranker top N",
+            min_value=1,
+            max_value=20,
+            value=int(current_cfg.get("reranker_top_n", 8)),
         )
         language_hint = st.text_input(
             "Language hint",
@@ -763,9 +792,17 @@ with tab_tenants:
                 "persona": persona.strip(),
                 "language_hint": language_hint.strip() or "Tự động",
                 "top_k": int(top_k),
+                "chunk_size": int(chunk_size),
+                "chunk_overlap": int(chunk_overlap),
                 "memory_turns": int(memory_turns),
                 "model_name": model_name.strip() or "llama3",
                 "adapter_name": adapter_name.strip() or "base",
+                "enable_query_expansion": bool(enable_query_expansion),
+                "enable_hybrid_retrieval": bool(enable_hybrid_retrieval),
+                "enable_reranker": bool(enable_reranker),
+                "query_expansion_count": int(query_expansion_count),
+                "hybrid_alpha": float(hybrid_alpha),
+                "reranker_top_n": int(reranker_top_n),
             }
             save_tenant_configs(tenant_configs)
             st.success("Đã lưu tenants.json.")
@@ -785,9 +822,17 @@ with tab_tenants:
                     "persona": "Bạn là trợ lý tư vấn doanh nghiệp.",
                     "language_hint": "Tự động theo ngôn ngữ câu hỏi",
                     "top_k": 5,
+                    "chunk_size": 700,
+                    "chunk_overlap": 120,
                     "memory_turns": 6,
                     "model_name": "llama3",
                     "adapter_name": "base",
+                    "enable_query_expansion": False,
+                    "enable_hybrid_retrieval": False,
+                    "enable_reranker": False,
+                    "query_expansion_count": 4,
+                    "hybrid_alpha": 0.55,
+                    "reranker_top_n": 8,
                 }
                 save_tenant_configs(tenant_configs)
                 st.success(f"Đã tạo tenant `{tenant_id}`. Reload trang để thấy trong dropdown.")

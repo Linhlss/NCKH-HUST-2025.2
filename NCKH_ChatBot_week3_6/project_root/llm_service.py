@@ -7,7 +7,15 @@ from typing import Dict, Optional
 from llama_index.llms.ollama import Ollama
 
 from project_root.config import (
+    CHUNK_OVERLAP,
+    CHUNK_SIZE,
+    DEFAULT_ENABLE_HYBRID_RETRIEVAL,
+    DEFAULT_ENABLE_QUERY_EXPANSION,
+    DEFAULT_ENABLE_RERANKER,
+    DEFAULT_HYBRID_ALPHA,
     DEFAULT_MODEL_NAME,
+    DEFAULT_QUERY_EXPANSION_COUNT,
+    DEFAULT_RERANKER_TOP_N,
     DEFAULT_TOP_K,
     OLLAMA_MAX_RETRIES,
     OLLAMA_RETRY_DELAY,
@@ -21,6 +29,16 @@ from project_root.utils import sanitize_id
 logger = logging.getLogger(__name__)
 
 LLM_CACHE: Dict[str, Ollama] = {}
+
+
+def _as_bool(value, default: bool) -> bool:
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() in {"1", "true", "yes", "on"}
+    return bool(value)
 
 
 def get_or_create_profile(tenant_id: str) -> TenantProfile:
@@ -42,6 +60,14 @@ def get_or_create_profile(tenant_id: str) -> TenantProfile:
         memory_turns=int(raw.get("memory_turns", 6)),
         model_name=raw.get("model_name", DEFAULT_MODEL_NAME),
         adapter_name=raw.get("adapter_name", "base"),
+        chunk_size=int(raw.get("chunk_size", CHUNK_SIZE)),
+        chunk_overlap=int(raw.get("chunk_overlap", CHUNK_OVERLAP)),
+        enable_query_expansion=_as_bool(raw.get("enable_query_expansion"), DEFAULT_ENABLE_QUERY_EXPANSION),
+        enable_hybrid_retrieval=_as_bool(raw.get("enable_hybrid_retrieval"), DEFAULT_ENABLE_HYBRID_RETRIEVAL),
+        enable_reranker=_as_bool(raw.get("enable_reranker"), DEFAULT_ENABLE_RERANKER),
+        query_expansion_count=int(raw.get("query_expansion_count", DEFAULT_QUERY_EXPANSION_COUNT)),
+        hybrid_alpha=float(raw.get("hybrid_alpha", DEFAULT_HYBRID_ALPHA)),
+        reranker_top_n=int(raw.get("reranker_top_n", DEFAULT_RERANKER_TOP_N)),
     )
 
 

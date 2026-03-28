@@ -72,4 +72,12 @@ def runtime_status_payload(profile: TenantProfile, user_id: str) -> Dict[str, An
             "name": profile.model_name,
             "adapter": profile.adapter_name,
         },
+        "retrieval": {
+            "top_k": profile.top_k,
+            "chunk_size": profile.chunk_size,
+            "chunk_overlap": profile.chunk_overlap,
+            "query_expansion": profile.enable_query_expansion,
+            "hybrid_retrieval": profile.enable_hybrid_retrieval,
+            "reranker": profile.enable_reranker,
+        },
     }

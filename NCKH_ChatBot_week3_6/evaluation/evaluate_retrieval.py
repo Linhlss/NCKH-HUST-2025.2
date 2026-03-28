@@ -7,6 +7,7 @@ import statistics
 import sys
 import time
 from collections import Counter, defaultdict
+from dataclasses import replace
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, Sequence
@@ -22,6 +23,7 @@ from project_root.retrieval import (
     extract_node_text,
     file_hints_from_question,
     prioritize_nodes_by_file_hint,
+    retrieve_ranked_items,
 )
 from project_root.router import route_question
 from project_root.runtime_manager import get_runtime
@@ -140,17 +142,25 @@ def summarize_group(items: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
     }
 
 
-def build_variant_results(query: str, runtime: Any, variant: str) -> list[Any]:
-    raw_nodes = list(runtime.retriever.retrieve(query))
+def build_variant_results(query: str, runtime: Any, variant: str, profile) -> list[Any]:
+    raw_nodes = list(runtime.index.as_retriever(similarity_top_k=max(profile.top_k, 5)).retrieve(query))
     if variant == "dense_raw":
         return raw_nodes
     if variant == "dense_prioritized":
         hints = file_hints_from_question(query)
         return prioritize_nodes_by_file_hint(raw_nodes, hints, query)
+    if variant == "runtime_profile":
+        return retrieve_ranked_items(runtime, question=query, retrieval_query=query, profile=profile)
     raise ValueError(f"Unsupported variant: {variant}")
 
 
-def evaluate_variant(cases: Sequence[QueryCase], variant: str) -> Dict[str, Any]:
+def _apply_profile_overrides(profile, overrides: Dict[str, Any] | None):
+    if not overrides:
+        return profile
+    return replace(profile, **overrides)
+
+
+def evaluate_variant(cases: Sequence[QueryCase], variant: str, profile_overrides: Dict[str, Any] | None = None) -> Dict[str, Any]:
     bootstrap_dirs()
     init_embedding_settings()
 
@@ -158,11 +168,13 @@ def evaluate_variant(cases: Sequence[QueryCase], variant: str) -> Dict[str, Any]
     details: list[Dict[str, Any]] = []
 
     for case in cases:
-        profile = get_or_create_profile(case.tenant_id)
-        runtime = runtimes.get(case.tenant_id)
-        if runtime is None:
-            runtime = get_runtime(profile)
-            runtimes[case.tenant_id] = runtime
+        profile = _apply_profile_overrides(get_or_create_profile(case.tenant_id), profile_overrides)
+        runtime = None
+        if is_vectorizable_case(case):
+            runtime = runtimes.get(case.tenant_id)
+            if runtime is None:
+                runtime = get_runtime(profile)
+                runtimes[case.tenant_id] = runtime
 
         route_started = time.perf_counter()
         route_result = route_question(case.query, profile, "eval")
@@ -171,9 +183,9 @@ def evaluate_variant(cases: Sequence[QueryCase], variant: str) -> Dict[str, Any]
         retrieval_latency_ms = 0.0
         serialized_results: list[Dict[str, Any]] = []
 
-        if is_vectorizable_case(case):
+        if is_vectorizable_case(case) and runtime is not None:
             retrieval_started = time.perf_counter()
-            raw_results = build_variant_results(case.query, runtime, variant)
+            raw_results = build_variant_results(case.query, runtime, variant, profile)
             retrieval_latency_ms = (time.perf_counter() - retrieval_started) * 1000
             serialized_results = [serialize_result(item) for item in raw_results]
 
@@ -238,6 +250,7 @@ def evaluate_variant(cases: Sequence[QueryCase], variant: str) -> Dict[str, Any]
         "variant": variant,
         "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
         "dataset_path": str(DATASET_PATH),
+        "profile_overrides": profile_overrides or {},
         "overall_retrieval": summarize_group(retrieval_items),
         "overall_route": {
             "count": len(route_items),
@@ -271,7 +284,7 @@ def render_report(results: Sequence[Dict[str, Any]]) -> str:
         "# Retrieval Evaluation",
         "",
         "Báo cáo này được sinh tự động từ `evaluation/evaluate_retrieval.py`.",
-        "Các biến thể hiện tại nhằm so sánh baseline dense retrieval với bản có ưu tiên file hint ở tầng hậu xử lý.",
+        "Các biến thể hiện tại nhằm so sánh baseline dense retrieval, hậu xử lý file hint, và runtime optimization thật.",
         "",
     ]
 
@@ -412,7 +425,7 @@ def main() -> int:
         "--variants",
         nargs="+",
         default=["dense_raw", "dense_prioritized"],
-        choices=["dense_raw", "dense_prioritized"],
+        choices=["dense_raw", "dense_prioritized", "runtime_profile"],
     )
     parser.add_argument("--json-out", type=Path, default=ARTIFACTS_DIR / "retrieval_metrics.json")
     parser.add_argument("--report-out", type=Path, default=REPORT_PATH)

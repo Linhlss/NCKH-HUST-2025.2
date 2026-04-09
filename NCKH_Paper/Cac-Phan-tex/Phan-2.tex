@@ -1,0 +1,73 @@
+\section{System Architecture}
+\subsection{Overall Structure}
+
+The proposed system is designed as a modular multi-tenant serving architecture that shares the core model across tenants while preserving tenant-specific data boundaries. Its main components are the data ingestion layer, the tenant-aware storage and retrieval layer, the adaptive inference engine, and the API serving layer.
+
+At the system level, the architecture is not organized around a single fixed RAG pipeline. Instead, it uses adaptive multi-path inference, where retrieval is one possible path inside a broader serving framework. A shared base language model is deployed as the main inference engine and serves multiple tenants through a common runtime.
+
+Each tenant maintains an isolated knowledge base and conversation state. During query processing, the runtime first identifies the tenant context, then applies route selection, and finally invokes the most appropriate execution path under that tenant scope.
+
+The routing layer determines whether a query should be processed through tool-based execution, retrieval-based generation, or direct generation. This design reduces unnecessary LLM calls and better matches execution cost to query complexity.
+
+\subsection{Data Ingestion and Knowledge Base Construction}
+
+The data ingestion layer is responsible for collecting, processing, and indexing tenant-specific data from multiple sources.
+
+Supported data types include:
+\begin{itemize}
+    \item Unstructured documents (PDF, DOCX, HTML)
+    \item Structured data (Excel, CSV)
+    \item Web-based content (links, HTML pages)
+\end{itemize}
+
+The ingestion pipeline performs document parsing, text normalization, chunking, embedding generation, and vector storage. Each tenant's data is stored in an isolated partition to enforce separation and reduce cross-tenant leakage risk.
+
+\subsection{Retrieval Module}
+
+The retrieval module is responsible for fetching relevant context only when the selected route requires external grounding.
+
+Given a user query and tenant identifier:
+\begin{enumerate}
+    \item The query is converted into an embedding vector
+    \item Similarity search is performed within the tenant-specific index
+    \item Top-k relevant chunks are returned
+\end{enumerate}
+
+To improve retrieval quality, the system can incorporate chunk filtering, re-ranking, and hybrid retrieval strategies. In the proposed architecture, retrieval is therefore a selective component of the serving process rather than the default path for every request.
+
+\subsection{Dynamic Inference Engine}
+
+The dynamic inference engine is the core component of the system. It combines a shared base LLM, a route-selection mechanism, and optional tenant-specific personalization modules.
+
+\subsubsection{Shared Base Model}
+
+A single base LLM is shared across all tenants, which reduces memory usage and simplifies deployment compared with maintaining a separate full model for each tenant.
+
+\subsubsection{Query Routing Mechanism}
+
+The system introduces a routing mechanism that maps incoming queries to one of several execution paths:
+\begin{itemize}
+    \item Tool-based queries (e.g., Excel parsing, file inspection)
+    \item Retrieval-based queries (RAG)
+    \item General queries handled directly by the LLM
+\end{itemize}
+
+This routing structure minimizes unnecessary model invocations and improves latency for heterogeneous workloads.
+
+\subsubsection{Dynamic Adapter Loading}
+
+To support tenant-level customization, the system uses PEFT-based adapters, specifically LoRA, that are dynamically loaded during inference. Instead of keeping all adapters in memory, the runtime loads the required adapter on demand and releases it after use, which lowers memory overhead while preserving personalization capability.
+
+\subsection{API and Serving Layer}
+
+The architecture is exposed through a RESTful API implemented with FastAPI.
+
+Key responsibilities include:
+\begin{itemize}
+    \item Handling user requests
+    \item Resolving tenant context
+    \item Invoking the selected execution path
+    \item Returning responses and associated provenance when applicable
+\end{itemize}
+
+The API layer also supports logging, monitoring, and integration with front-end applications. These functions are important for reproducibility and operational visibility in multi-tenant deployments.

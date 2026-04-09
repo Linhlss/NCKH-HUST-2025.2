@@ -1,0 +1,373 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{BookTemplate}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b230805041e42ed1e6078a8b3ac945c7}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {City of Publisher, Country}%
+      }
+      \list{publisher}{1}{%
+        {Abbrev. of Publisher}%
+      }
+      \strng{namehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{bibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorbibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authornamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{x}
+      \field{chaptertitle}{Title of chapter in the book}
+      \field{edition}{n}
+      \field{section}{x}
+      \field{title}{Title of His Published Book}
+      \field{year}{1970}
+      \field{dateera}{ce}
+      \field{pages}{xx\bibrangedash xx}
+      \range{pages}{1}
+    \endentry
+    \entry{ArticleTemplate}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b230805041e42ed1e6078a8b3ac945c7}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{bibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorbibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authornamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Abbrev.\,title of periodical}
+      \field{month}{1}
+      \field{number}{2}
+      \field{title}{Name of paper}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{123\bibrangedash 456}
+      \range{pages}{334}
+      \verb{doi}
+      \verb https://doi.org/10.1109.XX.123456
+      \endverb
+    \endentry
+    \entry{ReportTemplate}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=b230805041e42ed1e6078a8b3ac945c7}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Name of Co.}%
+      }
+      \list{location}{1}{%
+        {City of Co., Abbrev. State, Country}%
+      }
+      \strng{namehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{bibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorbibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authornamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Title of report}
+      \field{year}{2024}
+    \endentry
+    \entry{HanbookTemplate}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=6694e8fb19028c14016e89ec7d288562}{%
+           family={Name(s)},
+           familyi={N\bibinitperiod},
+           given={Author},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Publisher Location}%
+      }
+      \list{publisher}{1}{%
+        {Publisher Name}%
+      }
+      \strng{namehash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{fullhash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{fullhashraw}{6694e8fb19028c14016e89ec7d288562}
+      \strng{bibnamehash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{authorbibnamehash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{authornamehash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{authorfullhash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{authorfullhashraw}{6694e8fb19028c14016e89ec7d288562}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Edition (if applicable)}
+      \field{isbn}{ISBN Number (if available)}
+      \field{title}{Title of the Handbook}
+      \field{year}{2024}
+    \endentry
+    \entry{ReportHanbookOnlineTemplate}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=6694e8fb19028c14016e89ec7d288562}{%
+           family={Name(s)},
+           familyi={N\bibinitperiod},
+           given={Author},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Institution/Organization Name}%
+      }
+      \strng{namehash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{fullhash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{fullhashraw}{6694e8fb19028c14016e89ec7d288562}
+      \strng{bibnamehash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{authorbibnamehash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{authornamehash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{authorfullhash}{6694e8fb19028c14016e89ec7d288562}
+      \strng{authorfullhashraw}{6694e8fb19028c14016e89ec7d288562}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{note}{Accessed: Month Day, Year}
+      \field{number}{Report Number (if applicable)}
+      \field{title}{Title of the Report/Handbook}
+      \field{type}{Report Type (e.g., Technical Report)}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb URL
+      \endverb
+      \verb{url}
+      \verb URL
+      \endverb
+    \endentry
+    \entry{MISCTemplate}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=c1cedafec0e1d2c9705dc65ffb856ca5}{%
+           family={Organization},
+           familyi={O\bibinitperiod},
+           given={Author\bibnamedelima Name(s)},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           prefix={or},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1cedafec0e1d2c9705dc65ffb856ca5}
+      \strng{fullhash}{c1cedafec0e1d2c9705dc65ffb856ca5}
+      \strng{fullhashraw}{c1cedafec0e1d2c9705dc65ffb856ca5}
+      \strng{bibnamehash}{c1cedafec0e1d2c9705dc65ffb856ca5}
+      \strng{authorbibnamehash}{c1cedafec0e1d2c9705dc65ffb856ca5}
+      \strng{authornamehash}{c1cedafec0e1d2c9705dc65ffb856ca5}
+      \strng{authorfullhash}{c1cedafec0e1d2c9705dc65ffb856ca5}
+      \strng{authorfullhashraw}{c1cedafec0e1d2c9705dc65ffb856ca5}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version number, Accessed: Month Day, Year}
+      \field{title}{Title of the Software or Document}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb URL
+      \endverb
+      \verb{url}
+      \verb URL
+      \endverb
+    \endentry
+    \entry{InproceedingTemplate}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=b230805041e42ed1e6078a8b3ac945c7}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {City of Conf., Abbrev. State (if given), Country}%
+      }
+      \strng{namehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{bibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorbibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authornamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Abbreviated Name of Conf.}
+      \field{title}{Title of paper}
+      \field{year}{1970}
+      \field{dateera}{ce}
+      \field{pages}{xx\bibrangedash xx}
+      \range{pages}{1}
+    \endentry
+    \entry{PatentTemplate}{patent}{}{}
+      \name{author}{1}{}{%
+        {{hash=b230805041e42ed1e6078a8b3ac945c7}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{bibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorbibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authornamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \field{extraname}{5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{31}
+      \field{month}{12}
+      \field{number}{xx}
+      \field{title}{Title of patent}
+      \field{type}{U. S. Patent}
+      \field{year}{1970}
+      \field{dateera}{ce}
+    \endentry
+    \entry{MasterThesisTemplate}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=b230805041e42ed1e6078a8b3ac945c7}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Abbrev. Dept, Abbrev. Univ.}%
+      }
+      \list{location}{1}{%
+        {City of Univ., Abbrev. State}%
+      }
+      \strng{namehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{bibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorbibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authornamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \field{extraname}{6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Title of thesis}
+      \field{type}{M.S.~thesis}
+      \field{year}{1970}
+      \field{dateera}{ce}
+    \endentry
+    \entry{PhDThesisTemplate}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=b230805041e42ed1e6078a8b3ac945c7}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Abbrev. Dept, Abbrev. Univ.}%
+      }
+      \list{location}{1}{%
+        {City of Univ., Abbrev. State}%
+      }
+      \strng{namehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{fullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{bibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorbibnamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authornamehash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhash}{b230805041e42ed1e6078a8b3ac945c7}
+      \strng{authorfullhashraw}{b230805041e42ed1e6078a8b3ac945c7}
+      \field{extraname}{7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Title of dissertation}
+      \field{type}{Ph.D.~dissertation}
+      \field{year}{1970}
+      \field{dateera}{ce}
+    \endentry
+    \entry{IEEE:Standard308}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=472abfae8142fdb6f39d081303e8af85}{%
+           family={IEEE},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{fullhash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{fullhashraw}{472abfae8142fdb6f39d081303e8af85}
+      \strng{bibnamehash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{authorbibnamehash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{authornamehash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{authorfullhash}{472abfae8142fdb6f39d081303e8af85}
+      \strng{authorfullhashraw}{472abfae8142fdb6f39d081303e8af85}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{IEEE Standard 308}
+      \field{title}{IEEE Criteria for Class IE Electric Systems}
+      \field{year}{1969}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

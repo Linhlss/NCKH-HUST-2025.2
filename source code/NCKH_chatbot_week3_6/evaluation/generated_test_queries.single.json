@@ -1,0 +1,116 @@
+[
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_01",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT_2025_5445_QD-DHBK.pdf nói về nội dung chính gì?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "easy",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "ngày",
+      "định"
+    ],
+    "notes": "auto-generated from document preview"
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_02",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT_2025_5445_QD-DHBK.pdf có nhắc đến điều không?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "easy",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "ngày",
+      "định"
+    ],
+    "notes": "auto-generated from document preview"
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_03",
+    "tenant_id": "default",
+    "query": "Các chủ đề nổi bật trong QCDT_2025_5445_QD-DHBK.pdf là gì?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "ngày",
+      "định"
+    ],
+    "notes": "auto-generated from document preview"
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_04",
+    "tenant_id": "default",
+    "query": "Hãy tóm tắt ngắn tài liệu QCDT_2025_5445_QD-DHBK.pdf.",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "medium",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "ngày",
+      "định"
+    ],
+    "notes": "auto-generated from document preview"
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_05",
+    "tenant_id": "default",
+    "query": "Tài liệu QCDT_2025_5445_QD-DHBK.pdf có thông tin nào liên quan đến chương?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "hard",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "ngày",
+      "định"
+    ],
+    "notes": "auto-generated from document preview"
+  },
+  {
+    "id": "default_qcdt_2025_5445_qd_dhbk_pdf_06",
+    "tenant_id": "default",
+    "query": "Trong QCDT_2025_5445_QD-DHBK.pdf, thông tin nào liên quan đến luận?",
+    "expected_route": "retrieval",
+    "category": "regulation",
+    "difficulty": "hard",
+    "relevant_docs": [
+      "QCDT_2025_5445_QD-DHBK.pdf"
+    ],
+    "expected_keywords": [
+      "điều",
+      "chương",
+      "luận",
+      "ngày",
+      "định"
+    ],
+    "notes": "auto-generated from document preview"
+  }
+]

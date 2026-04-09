@@ -1,0 +1,15 @@
+\section{Conclusion}
+
+This paper presents an adaptive multi-path serving architecture for multi-tenant LLM systems with shared models and LoRA-based personalization. The proposed design addresses three coupled requirements of enterprise deployment: efficient serving under heterogeneous workloads, tenant-specific customization without full-model duplication, and tenant-aware isolation within a shared runtime.
+
+By treating retrieval, tool use, and direct generation as coordinated execution paths instead of forcing all requests through a single pipeline, the system better aligns inference cost with query needs. The shared base model improves resource efficiency, while dynamic LoRA loading enables lightweight personalization that remains compatible with multi-tenant deployment constraints.
+
+\subsection{Future Work}
+
+Future work includes:
+\begin{itemize}
+    \item learning-based routing policies with calibrated confidence scores,
+    \item stronger evaluation of personalization under tenant-specific benchmarks,
+    \item larger-scale system experiments across more tenants and workloads, and
+    \item deeper analysis of throughput, adapter switching overhead, and isolation guarantees in production-like settings.
+\end{itemize}

@@ -1,0 +1,14 @@
+{
+  "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+  "collection_name": "tenant_t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+  "data_signature": "40eaf2afdb8682f803f19f0d3a80cdfde69596579640a7d2c56e5e8b8e75cc8c",
+  "updated_at": "2026-03-27 00:50:35",
+  "document_count": 65,
+  "node_count": 178,
+  "chunk_size": 700,
+  "chunk_overlap": 120,
+  "embed_model": "intfloat/multilingual-e5-base",
+  "top_k": 5,
+  "model_name": "llama3",
+  "ollama_timeout": 360.0
+}

@@ -1,0 +1,157 @@
+\section*{Reference}
+Reference style should be strictly followed by the guidance in the examples below. References should be numbered in sequence and cited in the main text, and must be arranged in the order they are cited in the main text. When cited, the reference should appear on the line, in square brackets, inside the punctuation, with the reference number such as \cite{BookTemplate}. In case, it is necessary to cite more than one reference, write them as \cite{BookTemplate, ArticleTemplate, ReportTemplate} or \cite{BookTemplate, HanbookTemplate, ReportHanbookOnlineTemplate}. Please do not use automatic endnotes in \textit{Word}, rather, type the reference list at the end of the paper using the “References” style. All other contents remain unchanged. The first line indent of 0.75 cm applies only to the reference list.
+
+Reference numbers are set flush left and form a column of their own, hanging out beyond the body of the reference. The reference numbers are on the line, enclosed in square brackets. In all references, the given name of the author or editor is abbreviated to the initial only and precedes the last name. Use commas around Jr., Sr., in names. Abbreviate conference titles. When referencing a patent, provide the day and the month of issue, or application. References may not include all information; please obtain and include relevant information. Do not combine references. There must be only one reference with each number. If there is a URL included with the print reference, it can be included at the end of the reference. In this case, a DOI number for the full text is recommended to use.
+
+References in other languages should be translated into English and follow the JST following reference format and the title in original languages need to be provided, Example: N. T. Nguyen, T. H. Tran, and L. Q. Pham, Impact of the Fourth Industrial Revolution on Vietnam's textile and garment industry], Journal of Science and Technology, vol. 58, no. 3, pp. 45--56, 2023. [In Vietnames]: Ảnh hưởng của Cách mạng công nghiệp lần thứ tư đến ngành dệt may Việt Nam.
+
+Other than books, capitalize only the first word in a paper title, except for proper nouns and element symbols. For papers published in translation journals, please give the English citation first, followed by the original foreign-language citation. See the end of this document for formats and examples of common references.
+
+\begin{itemize}
+
+  \item \textit{\textbf{Basic format for books:}} \cite{BookTemplate}
+  \begin{lstlisting}[language=TeX]
+@book{BookTemplate,
+    author = {Author, J. K.},
+    title = {Title of His Published Book},
+    chapter = {x},
+    section = {x},
+    chaptertitle = {Title of chapter in the book},
+    edition = {n},
+    location = {City of Publisher, Country},
+    publisher = {Abbrev. of Publisher},
+    address = {City of Publisher, Country},
+    date = {1970},
+    pages = {xx--yy},
+    pagetotal = {ppp},
+    keywords = {template},
+}
+  \end{lstlisting}
+
+  \item \textit{\textbf{Basic format for periodicals:}} \cite{ArticleTemplate}
+  \begin{lstlisting}[language=TeX]
+@article{ArticleTemplate,
+    keywords = {template},
+    author = {Author, J. K.},
+    title = {Name of paper},
+    journal = {Abbrev. title of periodical},
+    volume = {11},
+    number = {2},
+    pages = {123-456},
+    month = {1},
+    year = {2024},
+    doi = {https://doi.org/10.1109. xx.123456},
+}
+  \end{lstlisting}
+
+  \item \textit{\textbf{Basic format for reports:}} \cite{ReportTemplate}
+  \begin{lstlisting}[language=TeX]
+@report{ReportTemplate,
+    author = {Author, J. K.},
+    title = {Title of report},
+    institution = {Name of Co.},
+    address = {City of Co., Abbrev. State, Country},
+    year = {2024},
+}
+  \end{lstlisting}
+
+\newpage
+  \item \textit{\textbf{Basic format for handbooks:}} \cite{HanbookTemplate}
+  \begin{lstlisting}[language=TeX]
+@book{HanbookTemplate,
+    author    = {Author Name(s)},
+    title     = {Title of the Handbook},
+    edition   = {Edition (if applicable)},
+    year      = {Year of Publication},
+    publisher = {Publisher Name},
+    address   = {Publisher Location},
+    isbn      = {ISBN Number (if available)}
+}
+  \end{lstlisting}
+
+  \item \textit{\textbf{Basic format for reports and handbooks (when available online):}} \cite{ReportHanbookOnlineTemplate}
+  \begin{lstlisting}[language=TeX]
+@techreport{ReportHanbookOnlineTemplate,
+    author    = {Author Name(s)},
+    title     = {Title of the Report/Handbook},
+    institution = {Institution/Organization Name},
+    year      = {Year of Publication},
+    number    = {Report Number (if applicable)},
+    type      = {Report Type (e.g., Technical Report)},
+    url       = {URL},
+    note      = {Accessed: Month Day, Year}
+}
+  \end{lstlisting}
+
+  \item \textit{\textbf{Basic format for computer programs and electronic documents (when available online):}} \cite{MISCTemplate}
+  \begin{lstlisting}[language=TeX]
+@misc{MISCTemplate,
+    author    = {Author Name(s) or Organization},
+    title     = {Title of the Software or Document},
+    year      = {Year of Release or Update},
+    url       = {URL},
+    note      = {Version number, Accessed: Month Day, Year}
+}
+  \end{lstlisting}
+
+\newpage
+  \item \textit{\textbf{Example for papers presented at conferences (unpublished):}} \cite{InproceedingTemplate}
+  \begin{lstlisting}[language=TeX]
+@inproceedings{InproceedingTemplate,
+    keywords = {template},
+    author = {Author, J. K.},
+    title = {Title of paper},
+    booktitle = {Abbreviated Name of Conf.},
+    location = {City of Conf., Abbrev. State (if given), Country},
+    date = {1970},
+    pages = {xx-xx},
+}
+  \end{lstlisting}
+
+  \item \textit{\textbf{Basic format for patents:}} \cite{PatentTemplate}
+  \begin{lstlisting}[language=TeX]
+@patent{PatentTemplate,
+    author = {Author, J. K.},
+    title = {Title of patent},
+    type = {U. S. Patent},
+    number = {xx},
+    date = {1970-12-31},
+}
+  \end{lstlisting}
+
+  \item \textit{\textbf{Basic format for theses (M.S.) and dissertations (Ph.D.):}} \cite{MasterThesisTemplate}, \cite{PhDThesisTemplate}
+  \begin{lstlisting}[language=TeX]
+@mastersthesis{MasterThesisTemplate,
+    author = {Author, J. K.},
+    title = {Title of thesis},
+    institution = {Abbrev. Dept, Abbrev. Univ.},
+    school = {Abbrev. Dept, Abbrev. Univ.},
+    location = {City of Univ., Abbrev. State},
+    date = {1970},
+    sortkey = {1},
+}
+  \end{lstlisting}
+
+  \begin{lstlisting}[language=TeX]
+@phdthesis{PhDThesisTemplate,
+    author = {Author, J. K.},
+    title = {Title of dissertation},
+    institution = {Abbrev. Dept, Abbrev. Univ.},
+    school = {Abbrev. Dept, Abbrev. Univ.},
+    location = {City of Univ., Abbrev. State},
+    date = {1970},
+    sortkey = {2},
+}
+  \end{lstlisting}
+
+  \item \textit{\textbf{Basic formats for standards:}} \cite{IEEE:Standard308}
+  \begin{lstlisting}[language=TeX]
+@standard{IEEE:Standard308,
+    author = {IEEE},
+    title = {IEEE Criteria for Class IE Electric Systems},
+    number = {IEEE Standard 308},
+    year = {1969},
+}
+  \end{lstlisting}
+
+\end{itemize}

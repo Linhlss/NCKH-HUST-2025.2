@@ -1,0 +1,5 @@
+{
+  "deprecated": true,
+  "moved_to": "personalization/datasets/default/generated_qa.json",
+  "note": "Tenant-specific QA datasets now live under personalization/datasets/<tenant_id>/."
+}

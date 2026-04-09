@@ -1,0 +1,37 @@
+\section{Experimental Evaluation}
+
+\subsection{Experimental Setup}
+
+The system is evaluated using a test set that covers heterogeneous enterprise-style queries:
+\begin{itemize}
+    \item Structured data queries handled by the tool path
+    \item Document-grounded queries handled by the retrieval path
+    \item General reasoning queries handled by direct generation
+    \item Multi-tenant requests executed under isolated tenant contexts
+\end{itemize}
+
+Two configurations are compared:
+\begin{itemize}
+    \item Fixed single-path baselines, where queries are forced through one dominant processing pipeline
+    \item The proposed adaptive system, which combines route selection, shared-model serving, and tenant-aware execution
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+
+The following metrics are used:
+\begin{itemize}
+    \item Latency (ms): time taken to produce a final response
+    \item Memory usage (MB): RAM or GPU consumption during serving
+    \item Response quality: correctness and usefulness of generated answers
+    \item Path suitability: whether the selected execution path matches the query type
+\end{itemize}
+
+\subsection{Results and Analysis}
+
+The results show that adaptive multi-path inference reduces latency by avoiding unnecessary retrieval or generation steps for lightweight queries. The shared-model design also lowers memory usage compared with configurations that replicate full models or overuse retrieval-heavy execution.
+
+Structured queries benefit the most from routing because they can be resolved through tools without incurring the full cost of long-context LLM inference. Retrieval-heavy queries still benefit from grounding when needed, while general queries avoid unnecessary external lookup.
+
+\subsection{Discussion}
+
+Overall, the evaluation supports the central systems claim of the paper: adaptive route selection, shared-model serving, and lightweight personalization work together to improve efficiency while preserving multi-tenant practicality.

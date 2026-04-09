@@ -1,0 +1,54 @@
+{
+  "history": [
+    {
+      "role": "user",
+      "content": "đọc dữ liệu file excel",
+      "ts": "2026-03-23 07:45:58"
+    },
+    {
+      "role": "assistant",
+      "content": "File `TKB20252-FULL.xlsx` là một **bảng dữ liệu có cấu trúc**.\n\n- Số dòng dữ liệu: **12,838**\n- Số cột hữu ích: **25**\n- Một số cột chính: Kỳ, Trường_Viện_Khoa, Mã_lớp, Mã_lớp_kèm, Mã_HP, Tên_HP, Tên_HP_Tiếng_Anh, Khối_lượng, Ghi_chú, Buổi_số, Thứ, Thời_gian\n- Ghi chú đọc file: đã chọn sheet `TKB20252` làm sheet đại diện, tự bỏ qua khoảng 1 dòng tiêu đề/phụ đề ở đầu\n\nDữ liệu trong file có vẻ gồm các nhóm thông tin như:\n- Mã/ID\n- Tên/mô tả\n- Nhóm/danh mục\n- Giá trị/giá bán/doanh thu\n- Thời gian/lịch\n- Địa điểm/chi nhánh/phòng\n- Trạng thái\n- Đơn vị/phòng ban/viện-khoa\n\nMột số từ khóa nổi bật suy ra từ dữ liệu:\n- web, tddt, điều, chỉnh, chuẩn, ac2070, thiết, lập\n\nVí dụ giá trị trong bảng:\n- Cột `Mã_lớp` có ví dụ: 169991, 169992, 168228\n- Cột `Tên_HP` có ví dụ: Khai thác thông tin đa phương tiện, Cở sở dữ liệu, Cấu trúc dữ liệu và giải thuật\n- Cột `Loại_lớp` có ví dụ: LT+BT, TN, ĐA\n- Cột `Trường_Viện_Khoa` có ví dụ: TDDT, THKHSS, TVL\n- Cột `Thời_gian` có ví dụ: 0645-0910, 0920-1145, 1505-1730\n- Cột `Thứ` có ví dụ: 6, 5, 3",
+      "ts": "2026-03-23 07:45:58"
+    },
+    {
+      "role": "user",
+      "content": "file excel chứa dữ liệu gì",
+      "ts": "2026-03-23 07:47:20"
+    },
+    {
+      "role": "assistant",
+      "content": "File `TKB20252-FULL.xlsx` là một **bảng dữ liệu có cấu trúc**.\n\n- Số dòng dữ liệu: **12,838**\n- Số cột hữu ích: **25**\n- Một số cột chính: Kỳ, Trường_Viện_Khoa, Mã_lớp, Mã_lớp_kèm, Mã_HP, Tên_HP, Tên_HP_Tiếng_Anh, Khối_lượng, Ghi_chú, Buổi_số, Thứ, Thời_gian\n- Ghi chú đọc file: đã chọn sheet `TKB20252` làm sheet đại diện, tự bỏ qua khoảng 1 dòng tiêu đề/phụ đề ở đầu\n\nDữ liệu trong file có vẻ gồm các nhóm thông tin như:\n- Mã/ID\n- Tên/mô tả\n- Nhóm/danh mục\n- Giá trị/giá bán/doanh thu\n- Thời gian/lịch\n- Địa điểm/chi nhánh/phòng\n- Trạng thái\n- Đơn vị/phòng ban/viện-khoa\n\nMột số từ khóa nổi bật suy ra từ dữ liệu:\n- web, tddt, điều, chỉnh, chuẩn, ac2070, thiết, lập\n\nVí dụ giá trị trong bảng:\n- Cột `Mã_lớp` có ví dụ: 169991, 169992, 168228\n- Cột `Tên_HP` có ví dụ: Khai thác thông tin đa phương tiện, Cở sở dữ liệu, Cấu trúc dữ liệu và giải thuật\n- Cột `Loại_lớp` có ví dụ: LT+BT, TN, ĐA\n- Cột `Trường_Viện_Khoa` có ví dụ: TDDT, THKHSS, TVL\n- Cột `Thời_gian` có ví dụ: 0645-0910, 0920-1145, 1505-1730\n- Cột `Thứ` có ví dụ: 6, 5, 3",
+      "ts": "2026-03-23 07:47:20"
+    },
+    {
+      "role": "user",
+      "content": "file excel chứa dữ liệu gì",
+      "ts": "2026-03-23 07:47:33"
+    },
+    {
+      "role": "assistant",
+      "content": "File `TKB20252-FULL.xlsx` là một **bảng dữ liệu có cấu trúc**.\n\n- Số dòng dữ liệu: **12,838**\n- Số cột hữu ích: **25**\n- Một số cột chính: Kỳ, Trường_Viện_Khoa, Mã_lớp, Mã_lớp_kèm, Mã_HP, Tên_HP, Tên_HP_Tiếng_Anh, Khối_lượng, Ghi_chú, Buổi_số, Thứ, Thời_gian\n- Ghi chú đọc file: đã chọn sheet `TKB20252` làm sheet đại diện, tự bỏ qua khoảng 1 dòng tiêu đề/phụ đề ở đầu\n\nDữ liệu trong file có vẻ gồm các nhóm thông tin như:\n- Mã/ID\n- Tên/mô tả\n- Nhóm/danh mục\n- Giá trị/giá bán/doanh thu\n- Thời gian/lịch\n- Địa điểm/chi nhánh/phòng\n- Trạng thái\n- Đơn vị/phòng ban/viện-khoa\n\nMột số từ khóa nổi bật suy ra từ dữ liệu:\n- web, tddt, điều, chỉnh, chuẩn, ac2070, thiết, lập\n\nVí dụ giá trị trong bảng:\n- Cột `Mã_lớp` có ví dụ: 169991, 169992, 168228\n- Cột `Tên_HP` có ví dụ: Khai thác thông tin đa phương tiện, Cở sở dữ liệu, Cấu trúc dữ liệu và giải thuật\n- Cột `Loại_lớp` có ví dụ: LT+BT, TN, ĐA\n- Cột `Trường_Viện_Khoa` có ví dụ: TDDT, THKHSS, TVL\n- Cột `Thời_gian` có ví dụ: 0645-0910, 0920-1145, 1505-1730\n- Cột `Thứ` có ví dụ: 6, 5, 3",
+      "ts": "2026-03-23 07:47:33"
+    },
+    {
+      "role": "user",
+      "content": "file excel chứa dữ liệu gì",
+      "ts": "2026-03-23 07:51:59"
+    },
+    {
+      "role": "assistant",
+      "content": "File `TKB20252-FULL.xlsx` là một **bảng dữ liệu có cấu trúc**.\n\n- Số dòng dữ liệu: **12,838**\n- Số cột hữu ích: **25**\n- Một số cột chính: Kỳ, Trường_Viện_Khoa, Mã_lớp, Mã_lớp_kèm, Mã_HP, Tên_HP, Tên_HP_Tiếng_Anh, Khối_lượng, Ghi_chú, Buổi_số, Thứ, Thời_gian\n- Ghi chú đọc file: đã chọn sheet `TKB20252` làm sheet đại diện, tự bỏ qua khoảng 1 dòng tiêu đề/phụ đề ở đầu\n\nDữ liệu trong file có vẻ gồm các nhóm thông tin như:\n- Mã/ID\n- Tên/mô tả\n- Nhóm/danh mục\n- Giá trị/giá bán/doanh thu\n- Thời gian/lịch\n- Địa điểm/chi nhánh/phòng\n- Trạng thái\n- Đơn vị/phòng ban/viện-khoa\n\nMột số từ khóa nổi bật suy ra từ dữ liệu:\n- web, tddt, điều, chỉnh, chuẩn, ac2070, thiết, lập\n\nVí dụ giá trị trong bảng:\n- Cột `Mã_lớp` có ví dụ: 169991, 169992, 168228\n- Cột `Tên_HP` có ví dụ: Khai thác thông tin đa phương tiện, Cở sở dữ liệu, Cấu trúc dữ liệu và giải thuật\n- Cột `Loại_lớp` có ví dụ: LT+BT, TN, ĐA\n- Cột `Trường_Viện_Khoa` có ví dụ: TDDT, THKHSS, TVL\n- Cột `Thời_gian` có ví dụ: 0645-0910, 0920-1145, 1505-1730\n- Cột `Thứ` có ví dụ: 6, 5, 3",
+      "ts": "2026-03-23 07:51:59"
+    },
+    {
+      "role": "user",
+      "content": "file excel chứa dữ liệu gì",
+      "ts": "2026-03-24 12:43:01"
+    },
+    {
+      "role": "assistant",
+      "content": "File `TKB20252-FULL.xlsx` là một **bảng dữ liệu có cấu trúc**.\n\n- Số dòng dữ liệu: **12,838**\n- Số cột hữu ích: **25**\n- Một số cột chính: Kỳ, Trường_Viện_Khoa, Mã_lớp, Mã_lớp_kèm, Mã_HP, Tên_HP, Tên_HP_Tiếng_Anh, Khối_lượng, Ghi_chú, Buổi_số, Thứ, Thời_gian\n- Ghi chú đọc file: đã chọn sheet `TKB20252` làm sheet đại diện, tự bỏ qua khoảng 1 dòng tiêu đề/phụ đề ở đầu\n\nDữ liệu trong file có vẻ gồm các nhóm thông tin như:\n- Mã/ID\n- Tên/mô tả\n- Nhóm/danh mục\n- Giá trị/giá bán/doanh thu\n- Thời gian/lịch\n- Địa điểm/chi nhánh/phòng\n- Trạng thái\n- Đơn vị/phòng ban/viện-khoa\n\nMột số từ khóa nổi bật suy ra từ dữ liệu:\n- web, tddt, điều, chỉnh, chuẩn, ac2070, thiết, lập\n\nVí dụ giá trị trong bảng:\n- Cột `Mã_lớp` có ví dụ: 169991, 169992, 168228\n- Cột `Tên_HP` có ví dụ: Khai thác thông tin đa phương tiện, Cở sở dữ liệu, Cấu trúc dữ liệu và giải thuật\n- Cột `Loại_lớp` có ví dụ: LT+BT, TN, ĐA\n- Cột `Trường_Viện_Khoa` có ví dụ: TDDT, THKHSS, TVL\n- Cột `Thời_gian` có ví dụ: 0645-0910, 0920-1145, 1505-1730\n- Cột `Thứ` có ví dụ: 6, 5, 3",
+      "ts": "2026-03-24 12:43:01"
+    }
+  ]
+}

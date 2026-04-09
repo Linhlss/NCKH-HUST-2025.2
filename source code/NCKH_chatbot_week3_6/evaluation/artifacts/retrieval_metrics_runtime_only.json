@@ -1,0 +1,3375 @@
+[
+  {
+    "variant": "runtime_profile",
+    "generated_at": "2026-03-27 00:42:56",
+    "dataset_path": "/Users/thao/Documents/NCKH_chatbot_week3_6/evaluation/test_queries.json",
+    "profile_overrides": {},
+    "overall_retrieval": {
+      "count": 36,
+      "hit_at_1": 0.3056,
+      "hit_at_3": 0.6111,
+      "hit_at_5": 0.8056,
+      "mrr": 0.4968,
+      "route_accuracy": 0.8889,
+      "avg_retrieval_latency_ms": 6.09
+    },
+    "overall_route": {
+      "count": 54,
+      "accuracy": 0.7593,
+      "avg_route_latency_ms": 347.04,
+      "distribution": {
+        "retrieval": 41,
+        "tool": 13
+      }
+    },
+    "by_category": {
+      "regulation_2021": {
+        "count": 18,
+        "hit_at_1": 0.2778,
+        "hit_at_3": 0.6667,
+        "hit_at_5": 0.8333,
+        "mrr": 0.481,
+        "route_accuracy": 0.8889,
+        "avg_retrieval_latency_ms": 5.92
+      },
+      "regulation_2025": {
+        "count": 18,
+        "hit_at_1": 0.3333,
+        "hit_at_3": 0.5556,
+        "hit_at_5": 0.7778,
+        "mrr": 0.5126,
+        "route_accuracy": 0.8889,
+        "avg_retrieval_latency_ms": 6.27
+      },
+      "timetable_20252": {
+        "count": 0,
+        "hit_at_1": 0.0,
+        "hit_at_3": 0.0,
+        "hit_at_5": 0.0,
+        "mrr": 0.0,
+        "route_accuracy": 0.5,
+        "avg_retrieval_latency_ms": 0.0
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 23,
+        "hit_at_1": 0.3043,
+        "hit_at_3": 0.6522,
+        "hit_at_5": 0.8261,
+        "mrr": 0.4961,
+        "route_accuracy": 0.7778,
+        "avg_retrieval_latency_ms": 6.49
+      },
+      "hard": {
+        "count": 2,
+        "hit_at_1": 0.0,
+        "hit_at_3": 0.0,
+        "hit_at_5": 0.5,
+        "mrr": 0.1705,
+        "route_accuracy": 0.5,
+        "avg_retrieval_latency_ms": 4.87
+      },
+      "medium": {
+        "count": 11,
+        "hit_at_1": 0.3636,
+        "hit_at_3": 0.6364,
+        "hit_at_5": 0.8182,
+        "mrr": 0.5576,
+        "route_accuracy": 0.75,
+        "avg_retrieval_latency_ms": 5.48
+      }
+    },
+    "by_tenant": {
+      "01": {
+        "count": 18,
+        "hit_at_1": 0.2778,
+        "hit_at_3": 0.6667,
+        "hit_at_5": 0.8333,
+        "mrr": 0.481,
+        "route_accuracy": 0.8889,
+        "avg_retrieval_latency_ms": 5.92
+      },
+      "default": {
+        "count": 0,
+        "hit_at_1": 0.0,
+        "hit_at_3": 0.0,
+        "hit_at_5": 0.0,
+        "mrr": 0.0,
+        "route_accuracy": 0.5,
+        "avg_retrieval_latency_ms": 0.0
+      },
+      "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf": {
+        "count": 18,
+        "hit_at_1": 0.3333,
+        "hit_at_3": 0.5556,
+        "hit_at_5": 0.7778,
+        "mrr": 0.5126,
+        "route_accuracy": 0.8889,
+        "avg_retrieval_latency_ms": 6.27
+      }
+    },
+    "failures": [
+      {
+        "id": "R2021-18",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "hard",
+        "query": "Điều 21 trong QCDT 2021 thuộc chương nào và nói về nội dung gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 0,
+        "route_latency_ms": 1395.01,
+        "retrieval_latency_ms": 5.14,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "13 \n \n \n5. Tự nguyện thôi học: Sinh viên thấy không có đủ điều kiện hoặc không muốn tiếp \ntục học tại ĐHBK Hà Nội có thể làm đơn đề nghị thôi học và được xem xét cho thôi học. \nSinh viên đã có quyết định cho thôi học không được tiếp nhận tr",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Sinh viên \nthuộc diện này sẽ bị xét buộc thôi học nếu nghỉ quá 04 học kỳ chính. \nđ) Sinh viên phải nộp đơn đề nghị tiếp nhận trở lại học chậm nhất 1 tuần trước khi \nbắt đầu học kỳ mới. Đối với trường hợp được điều động vào lực lượng vũ tran",
+            "scope": "shared",
+            "page_label": "16",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường \nhợp đặc biệt sẽ do Giám đốc ĐHBK Hà Nội quyết định. \n3. Đối với trường hợp xin nghỉ học tạm thời vì những lý do khác với lý do tại khoản \n1 và khoản 2 Điều này thì thời gian nghỉ học tối đa cho phép là 02 học kỳ chính và được \nt",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "c) Điểm R: điểm học phần được miễn học và công nhận tín chỉ. \nd) Điểm P: áp dụng cho các học phần chỉ yêu cầu đạt, không tính vào đ iểm trung \nbình học tập. \nđ) Điểm W: điểm học phần đã rút đăng ký học phần trong thời gian quy định. \ne) Điể",
+            "scope": "shared",
+            "page_label": "8",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 6. Hoãn thi, miễn thi, phúc tra và khiếu nại điểm \n1. Người học được thi cuối kỳ một lần đối với mỗi học phần đã đăng ký học trong \nhọc kỳ (kể cả trường hợp có điểm quá trình là điểm liệt) và không có lần thi lại.  \n2. Người học không ",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.25,
+        "notes": ""
+      },
+      {
+        "id": "R2025-07",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Mục lục của quy chế đào tạo 2025 có Điều 9 về nội dung gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 0,
+        "route_latency_ms": 1548.7,
+        "retrieval_latency_ms": 6.55,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Tin tức\nXem thêm +\nSeminar khoa học: Mô hình hồi quy Logistic cho dữ liệu bảo vệ quyền riêng tư bằng kỹ thuật Matrix Masking04/02/2026Tổng Kết Buổi Sinh Hoạt Công Dân Giữa Khóa Năm Học 2025-202618/12/2025KỶ NIỆM 43 NĂM NGÀY NHÀ GIÁO VIỆT NA",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "14 \n \n2. Hạn chế khối lượng họ c tập là hình thức buộc những sinh v iên đang bị cảnh \nbáo học tập hoặc chưa đạt chuẩn ngoại ngữ đăng ký số tín chỉ học p hần ít hơn bình \nthường, cụ thể như sau: \na) Sinh viên thuộc các chương trình đào  tạo ",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ \nsở đào tạo trong khoảng thời gian 7 tuần kể từ k hi hết thời hạn điều chỉnh đăng ký lớp \ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nử",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Đồ án/khóa luận tốt nghiệp đại học \nCác học phần tốt nghi ệp (sau đây gọi tắt là ĐATN ) bao gồm đồ án tốt nghiệp cử \nnhân, khóa luận tốt nghiệp cử nhân. \n1. Sinh viên được g iao đề tài ĐATN nếu có tổn g số tín chỉ chưa đạt không vượt \nquá 8",
+            "scope": "shared",
+            "page_label": "12",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.0,
+        "notes": ""
+      },
+      {
+        "id": "R2025-16",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "hard",
+        "query": "Trong phần ký văn bản của QCDT 2025, người ký với chức vụ gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 4.59,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường hợp không đ ược thông \nqua phải thực hiện đăng ký lại.  \n4. Ngay sau khi nhận quyết định giao đề tài, học viên phải xây dựng kế hoạc h \nthực hiện luận văn thạc sĩ và được người hướng dẫn đồng ý. \nĐiều 30. Điều kiện được bảo vệ lu",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Việc tổ chức thi lại phải hoàn thành chậm nhất trước khi bắt đầu \nhọc kỳ chính kế ti ếp. Điểm học phần sau khi t hi lại bị giới hạn không vượt quá mức \nđiểm C.  \n3. Người học không dự th i giữa kỳ do bị ốm, tai  nạn hoặc vì lý do chính đán ",
+            "scope": "shared",
+            "page_label": "8",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Tin tức\nXem thêm +\nSeminar khoa học: Mô hình hồi quy Logistic cho dữ liệu bảo vệ quyền riêng tư bằng kỹ thuật Matrix Masking04/02/2026Tổng Kết Buổi Sinh Hoạt Công Dân Giữa Khóa Năm Học 2025-202618/12/2025KỶ NIỆM 43 NĂM NGÀY NHÀ GIÁO VIỆT NA",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợ p quá thời hạn 2 năm  nhưng không thể hoàn thành, NCS \ncó thể đề nghị xin gia hạn thời gian thực hiện trong khoảng thời gian 6 tháng kế tiếp; \nquá thời hạn trên vẫn không thể hoàn thành thì bị xem xét cho thôi học. \nĐiều 38.",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "0 điểm trở lên tính theo điểm \nđối đa do Hội đồng Giáo sư nhà nước quy định ch o mỗi loại công trình (kh ông chia \nđiểm khi có đồng tác giả); \nd) Luận án đã được góp ý và đánh giá qua các hội thảo chuyên môn, trong đó hội \nthảo lần cuối  có",
+            "scope": "shared",
+            "page_label": "26",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.09090909090909091,
+        "notes": ""
+      },
+      {
+        "id": "R2021-08",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "medium",
+        "query": "Điều 12 trong QCDT 2021 nói về phản hồi hay đánh giá nào của người học?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.23,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "d) Luận án chỉ được đề nghị đưa ra đánh giá ở hội đồng đánh giá luận án cấp Đại học \nkhi có tối thiểu 6 thành viên của hội đồng cấp cơ sở ở lần đánh giá cuối cùng đồng ý thông \nqua (ghi trong phiếu nhận xét luận án). \nđ) Trong vòng 20 ngày ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Tiểu luận tổng quan được đánh giá đạt nếu được người hướng dẫn và đơn vị chuyên \nmôn thông qua. \nb) NCS phải hoàn thành tiểu luận tổng quan với kết quả đạt trong thời hạn 12 tháng \nkể từ khi có quyết định công nhận NCS.  \n2. Các chuyên đề t",
+            "scope": "shared",
+            "page_label": "29",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "27 \n \n \nđủ 90 ngày tính đến thời điểm kết thúc thời gian học tập chương trình tiến sĩ quy định tại \nkhoản 3 Điều 3 Quy chế này. Trong trường hợp không đủ thời gian 90 ngày, NCS phải làm \nthủ tục xin gia hạn thời gian học tập theo quy định. ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "3. Đối với trường hợp xin nghỉ học tạm thời vì những lý do khác với lý do tại khoản \n1 và khoản 2 Điều này, học viên phải học ít nhất một học kỳ tại ĐHBK Hà Nội, không \nthuộc các trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật, mới",
+            "scope": "shared",
+            "page_label": "26",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp không đủ thời gian \n90 ngày, NCS phải làm thủ tục xin gia hạn thời gian học tập theo quy định.  \nb) Hội đồng đánh giá luận án cấp cơ sở (sau đây gọi tắt là hội đồng cấp cơ sở) do \nHiệu tr ưởng trường tr ực thu ộc/Trưởng kho",
+            "scope": "shared",
+            "page_label": "27",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.2,
+        "notes": ""
+      },
+      {
+        "id": "R2025-09",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "QCDT 2025 có chương nào về đào tạo đại học không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.31,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Tính \ntích hợp được thể h iện bằng việc thiết kế các môđun học phần trong chương trình cử \nnhân có kiến thức nền tảng liên quan chặt chẽ đến các chuyên ngành kỹ sư. \n4. Chương trình ELITECH (từ viết tắt củ a cụm từ Elite Technology Program)",
+            "scope": "shared",
+            "page_label": "4",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "17 \n \nCHƯƠNG IV \nĐÀO TẠO THẠC SĨ \nĐiều 27. Đăng ký học tập chương trình thạc sĩ \n1. Đăng ký học phần: Học viên thực hiện quy trình đăng ký học phần từ tài khoản \nhọc tập cá nhân theo kế hoạ ch học tập chuẩn hoặc theo kế hoạch cá nhân. Học v",
+            "scope": "shared",
+            "page_label": "20",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Liên kết web\nCổng thông tin sinh viên\nThư viện Tạ Quang Bửu\nThư điện tử ĐHBK HN\nHệ thống quản trị ĐH trực tuyến\nCổng thông tin đào tạo\n \n\n\n Cơ hội nghề nghiệp\n\n\n\nGame Designer Intern/Fresher tại Falcon Game Studio\n\n17/03/2026\n\n\n\n📢 THÔNG BÁO",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Sinh viên thi hộ hoặc nhờ  người thi hộ đều bị kỷ luật ở mức đình chỉ  học tập \n01 năm đối với trường hợp vi  phạm lần thứ nhất và buộc t hôi học đối với trường hợp \nvi phạm lần thứ hai. \n3. Sinh viên sử dụng chứng chỉ ngoại ngữ giả hoặc",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 31. Điều kiện được bảo vệ luận văn thạc sĩ \nHọc viên có đủ các điều kiện sau đây thì được bảo vệ luận văn thạc sĩ: \n1. Đã hoàn thành và đạt các học phần theo yêu cầu của CTĐT. \n2. Đạt chuẩn ngoại ngữ đầu ra tương đương bậc 4/6 theo Khu",
+            "scope": "shared",
+            "page_label": "24",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.2,
+        "notes": ""
+      },
+      {
+        "id": "R2025-15",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "medium",
+        "query": "Quy chế đào tạo 2025 được giới thiệu là ban hành kèm theo quyết định của ai?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.32,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "14 \n \n2. Hạn chế khối lượng họ c tập là hình thức buộc những sinh v iên đang bị cảnh \nbáo học tập hoặc chưa đạt chuẩn ngoại ngữ đăng ký số tín chỉ học p hần ít hơn bình \nthường, cụ thể như sau: \na) Sinh viên thuộc các chương trình đào  tạo ",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n2. Hạng tốt nghiệp được xếp dựa trên điểm trung bình toàn khóa như xếp loại học \nlực quy định tại khoản 6, Điều 12 của Quy chế này, riêng trong các trường hợp sau đây \nthì hạng tốt nghiệp của học viên có điểm trung bì nh toàn khóa xếp",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ \nsở đào tạo trong khoảng thời gian 7 tuần kể từ k hi hết thời hạn điều chỉnh đăng ký lớp \ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nử",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Riêng việc đăng ký bổ sung \nvào các lớp học phần đã mở c hỉ thực hiện trong tuần đ ầu của học kỳ/đợt học.  Học kỳ \nhè không có đợt điều chỉnh đăng ký. \n2. Số lượng tín chỉ đăng ký: \na) Sinh viên không thuộc diện  cảnh báo học tập theo quy đ",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.14285714285714285,
+        "notes": ""
+      },
+      {
+        "id": "R2021-10",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "QCDT 2021 có Điều 14 về đăng ký tốt nghiệp đại học không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.36,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "11 \n \n \nb) Các điểm của người hướng dẫn, phản biện và thành viên hội đồng đánh giá ĐATN \nđược phép cho lẻ tới 0,5 điểm. \nc) Điểm quá trình của ĐATN được tính bằng trung bình cộng điểm của người hướng \ndẫn và điểm của người phản biện, làm tr",
+            "scope": "shared",
+            "page_label": "15",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "19 \n \n \nCHƯƠNG IV \nĐÀO TẠO THẠC SĨ \nĐiều 27. Đăng ký học tập chương trình thạc sĩ \n1. Đăng ký học tập: Học viên thực hiện quy trình đăng ký học từ tài khoản học tập cá \nnhân theo kế hoạch học tập chuẩn hoặc theo kế hoạch cá nhân. Học viên đ",
+            "scope": "shared",
+            "page_label": "23",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ không được vượt quá 3 học kỳ chính và không vượt \nquá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 3 năm đến 4 năm. Nếu NCS đăng \nký học tập, nghiên cứu với khố",
+            "scope": "shared",
+            "page_label": "7",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "2 \n \n \nưu hóa thời gian đào tạo cho người học. CTĐT tích hợp cử nhân-kỹ sư, cử nhân-thạc sĩ có \nthời gian thiết kế là 5,5 năm và khối lượng học tập 180 TC. CTĐT tích hợp bao gồm hai \nbậc trình độ: Cử nhân (thời gian đào tạo 4 năm, trình độ ",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 31. Điều kiện được bảo vệ luận văn thạc sĩ \nHọc viên có đủ các điều kiện sau đây thì được bảo vệ luận văn thạc sĩ: \n1. Đã hoàn thành và đạt các học phần theo yêu cầu của CTĐT. \n2. Đạt chuẩn ngoại ngữ đầu ra tương đương bậc 4/6 theo Khu",
+            "scope": "shared",
+            "page_label": "24",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.1,
+        "notes": ""
+      },
+      {
+        "id": "R2021-07",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "QCDT 2021 có Điều 11 về nội dung nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.04,
+        "retrieval_latency_ms": 5.6,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điểm thưởng công bố khoa học \ndo hội đồng đánh giá luận văn quyết định, nằm trong khoảng từ 0,5 đến 1,5. \n2. Hội đồng đánh giá luận văn cho điểm bảo vệ luận văn từ 8,5 trở lên chỉ khi học \nviên có công bố khoa học liên quan đến nội dung luậ",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nSố:                 /QĐ-ĐHBK   Hà Nội, ngày        tháng      năm 2025 \n \nQUYẾT ĐỊNH \nVề việc ban hành Quy chế ",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "21 \n \n \nhoàn toàn bằng ngôn ngữ nước ngoài. Yêu cầu ngoại ngữ đầu vào và ngoại ngữ đầu ra phải \ncùng một ngôn ngữ. \n3. Người hướng dẫn và phản biện xác nhận bản thảo luận văn đã đáp ứng đầy đủ các \nyêu cầu về chất lượng và nội dung khoa học",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp lu ận văn không đạt yêu cầu và học viên còn được phép học \ntối thiểu 03 tháng, học viên được phép chỉnh sửa, bổ sung luận văn để bảo vệ lần t hứ \nhai trong thời hạn 03 tháng tính từ ngày bảo vệ luận văn lần thứ nhất. \n2. Tr",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Việc thay đổi đề tài, thay đổi người hướng dẫn phải được thực \nhiện tối thiểu trước 6 tháng so với thời điểm hết hạn đào tạo (tính cả thời gian gia h ạn nếu \ncó).  \nĐiều 30. Luận văn thạc sĩ \n1. Luận văn là một báo cáo khoa học, tổng hợp cá",
+            "scope": "shared",
+            "page_label": "24",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.25,
+        "notes": ""
+      },
+      {
+        "id": "R2021-05",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "medium",
+        "query": "Trong QCDT 2021, Điều 10 thuộc chương nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.63,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "3 \n \n \n8. Các CTĐT cấp bằng cử nhân, kỹ sư, thạc sĩ, tiến sĩ được công bố công khai trước \nkhi tuyển sinh, phù hợp với các quy định hiện hành của Bộ GDĐT và chuẩn CTĐT của \nĐHBK Hà Nội. \n9. CTĐT có thể được điều chỉnh và áp dụng cho từng kh",
+            "scope": "shared",
+            "page_label": "7",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "2 \n \n \nưu hóa thời gian đào tạo cho người học. CTĐT tích hợp cử nhân-kỹ sư, cử nhân-thạc sĩ có \nthời gian thiết kế là 5,5 năm và khối lượng học tập 180 TC. CTĐT tích hợp bao gồm hai \nbậc trình độ: Cử nhân (thời gian đào tạo 4 năm, trình độ ",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường \nhợp đặc biệt sẽ do Giám đốc ĐHBK Hà Nội quyết định. \n3. Đối với trường hợp xin nghỉ học tạm thời vì những lý do khác với lý do tại khoản \n1 và khoản 2 Điều này thì thời gian nghỉ học tối đa cho phép là 02 học kỳ chính và được \nt",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "27 \n \n \nđủ 90 ngày tính đến thời điểm kết thúc thời gian học tập chương trình tiến sĩ quy định tại \nkhoản 3 Điều 3 Quy chế này. Trong trường hợp không đủ thời gian 90 ngày, NCS phải làm \nthủ tục xin gia hạn thời gian học tập theo quy định. ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "28 \n \n \nĐiều 43. Đánh giá lại luận án tiến sĩ \n1. Trong trường hợp hội đồng đánh giá luận án cấp Đại học có quyết nghị không thông \nqua luận án và cho phép bảo vệ lại, NCS được phép chỉnh sửa, bổ sung luận án và đề nghị \nbảo vệ luận án lần ",
+            "scope": "shared",
+            "page_label": "32",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.09090909090909091,
+        "notes": ""
+      },
+      {
+        "id": "R2025-11",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "QCDT 2025 có Điều 4 về tín chỉ và học phần đúng không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.72,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường hợp không đ ược thông \nqua phải thực hiện đăng ký lại.  \n4. Ngay sau khi nhận quyết định giao đề tài, học viên phải xây dựng kế hoạc h \nthực hiện luận văn thạc sĩ và được người hướng dẫn đồng ý. \nĐiều 30. Điều kiện được bảo vệ lu",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Đăng ký tốt nghiệp đại học \n1. Trường ĐHBK Hà Nội xét tốt nghiệp nhiều đợt trong năm, cụ  thể là cuối mỗi \nđợt học A, B của các học kỳ chính và cuối học kỳ hè. Sinh viên muốn được xét tốt \nnghiệp phải đăng ký theo các mốc thời gian quy định",
+            "scope": "shared",
+            "page_label": "13",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Sinh viên thi hộ hoặc nhờ  người thi hộ đều bị kỷ luật ở mức đình chỉ  học tập \n01 năm đối với trường hợp vi  phạm lần thứ nhất và buộc t hôi học đối với trường hợp \nvi phạm lần thứ hai. \n3. Sinh viên sử dụng chứng chỉ ngoại ngữ giả hoặc",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "19 \n \nnước ngoài, hoặc bằng tốt nghiệp trình độ đại học trở lên ngàn h khác mà chương trình \nđược thực hiện hoàn toàn bằng ngôn ngữ nước ngoài;  \n3. Điểm trung bình tích lũy (CPA) đạt từ 2,0 trở lên; \n4. Người hướng dẫn và các phản biện xác",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.14285714285714285,
+        "notes": ""
+      }
+    ],
+    "details": [
+      {
+        "id": "R2025-01",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Quy chế đào tạo năm 2025 của Đại học Bách khoa Hà Nội được ban hành kèm theo quyết định nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.22,
+        "retrieval_latency_ms": 12.27,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \n \n \n \n \n \n \n \n \n \n \nQUY CHẾ  ĐÀO TẠO \n(Ban hành kèm theo Quyết định số                 /QĐ-ĐHBK, ngày        tháng        năm 2025 \ncủa Giám đốc Đại học Bách khoa Hà Nội) \n \n \n \n \n \n \n \n \n \n",
+            "scope": "shared",
+            "page_label": "2",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nTRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI \n \n \n \n \n \n \n \n \n \n \nQUY CHẾ ĐÀO TẠO \n(Ban hành kèm theo Quyết định số 3095/QĐ–ĐHBK-ĐT  ngày 22 tháng 12 năm 2021 \ncủa Hiệu trưởng Trường Đại học Bách khoa Hà Nội) \n \n \n \n \n \n \n \n \n \n ",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "11 \n \nGiáo dục quốc phòng-an ninh hoặc Giáo dục thể chất, trong thời hạn tối đa 03 năm kể \ntừ khi hết thờ i hạn học tập được  phép đăng ký học để hoàn thiện c ác học phần còn \nthiếu này và đề nghị xét công nhận tốt nghiệp. \n6. Sinh viên khô",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Đăng ký tốt nghiệp đại học \n1. Trường ĐHBK Hà Nội xét tốt nghiệp nhiều đợt trong năm, cụ  thể là cuối mỗi \nđợt học A, B của các học kỳ chính và cuối học kỳ hè. Sinh viên muốn được xét tốt \nnghiệp phải đăng ký theo các mốc thời gian quy định",
+            "scope": "shared",
+            "page_label": "13",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n2. Hạng tốt nghiệp được xếp dựa trên điểm trung bình toàn khóa như xếp loại học \nlực quy định tại khoản 6, Điều 12 của Quy chế này, riêng trong các trường hợp sau đây \nthì hạng tốt nghiệp của học viên có điểm trung bì nh toàn khóa xếp",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2025-02",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Văn bản QCDT 2025 do cơ quan nào ban hành?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.04,
+        "retrieval_latency_ms": 7.57,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Liên kết web\nCổng thông tin sinh viên\nThư viện Tạ Quang Bửu\nThư điện tử ĐHBK HN\nHệ thống quản trị ĐH trực tuyến\nCổng thông tin đào tạo\n \n\n\n Cơ hội nghề nghiệp\n\n\n\nGame Designer Intern/Fresher tại Falcon Game Studio\n\n17/03/2026\n\n\n\n📢 THÔNG BÁO",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Tin tức\nXem thêm +\nSeminar khoa học: Mô hình hồi quy Logistic cho dữ liệu bảo vệ quyền riêng tư bằng kỹ thuật Matrix Masking04/02/2026Tổng Kết Buổi Sinh Hoạt Công Dân Giữa Khóa Năm Học 2025-202618/12/2025KỶ NIỆM 43 NĂM NGÀY NHÀ GIÁO VIỆT NA",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Tính \ntích hợp được thể h iện bằng việc thiết kế các môđun học phần trong chương trình cử \nnhân có kiến thức nền tảng liên quan chặt chẽ đến các chuyên ngành kỹ sư. \n4. Chương trình ELITECH (từ viết tắt củ a cụm từ Elite Technology Program)",
+            "scope": "shared",
+            "page_label": "4",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Khoa Toán - Tin, ĐH Bách Khoa Hà Nội\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nĐại học Bách Khoa Hà Nội\n\n \n \n\n\n\n\n\n\n\n\n\n  English\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\nToggle navigation\n\n\n\n\n\n\nGiới thiệu \n\nGiới thiệu chung\nSứ mạng và Tầm nhìn\nTriết lý giáo dục\nCơ ",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 31. Điều kiện được bảo vệ luận văn thạc sĩ \nHọc viên có đủ các điều kiện sau đây thì được bảo vệ luận văn thạc sĩ: \n1. Đã hoàn thành và đạt các học phần theo yêu cầu của CTĐT. \n2. Đạt chuẩn ngoại ngữ đầu ra tương đương bậc 4/6 theo Khu",
+            "scope": "shared",
+            "page_label": "24",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.2,
+        "notes": ""
+      },
+      {
+        "id": "R2025-03",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Điều 1 của quy chế đào tạo 2025 nói về nội dung gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 0,
+        "route_latency_ms": 1470.25,
+        "retrieval_latency_ms": 8.59,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nSố:                 /QĐ-ĐHBK   Hà Nội, ngày        tháng      năm 2025 \n \nQUYẾT ĐỊNH \nVề việc ban hành Quy chế ",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n2. Hạng tốt nghiệp được xếp dựa trên điểm trung bình toàn khóa như xếp loại học \nlực quy định tại khoản 6, Điều 12 của Quy chế này, riêng trong các trường hợp sau đây \nthì hạng tốt nghiệp của học viên có điểm trung bì nh toàn khóa xếp",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "11 \n \nGiáo dục quốc phòng-an ninh hoặc Giáo dục thể chất, trong thời hạn tối đa 03 năm kể \ntừ khi hết thờ i hạn học tập được  phép đăng ký học để hoàn thiện c ác học phần còn \nthiếu này và đề nghị xét công nhận tốt nghiệp. \n6. Sinh viên khô",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "c) Điểm R: điểm học phần được miễn học và công nhận tín chỉ. \nd) Điểm P: áp dụng cho các học phần chỉ yêu cầu đạt, không tính vào đ iểm trung \nbình học tập. \nđ) Điểm W: điểm học phần đã rút đăng ký học phần trong thời gian quy định. \ne) Điể",
+            "scope": "shared",
+            "page_label": "8",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2025-04",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Điều 2 của quyết định ban hành quy chế đào tạo 2025 nói gì về hiệu lực?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 4.83,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nSố:                 /QĐ-ĐHBK   Hà Nội, ngày        tháng      năm 2025 \n \nQUYẾT ĐỊNH \nVề việc ban hành Quy chế ",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n2. Hạng tốt nghiệp được xếp dựa trên điểm trung bình toàn khóa như xếp loại học \nlực quy định tại khoản 6, Điều 12 của Quy chế này, riêng trong các trường hợp sau đây \nthì hạng tốt nghiệp của học viên có điểm trung bì nh toàn khóa xếp",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "11 \n \nGiáo dục quốc phòng-an ninh hoặc Giáo dục thể chất, trong thời hạn tối đa 03 năm kể \ntừ khi hết thờ i hạn học tập được  phép đăng ký học để hoàn thiện c ác học phần còn \nthiếu này và đề nghị xét công nhận tốt nghiệp. \n6. Sinh viên khô",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "14 \n \n2. Hạn chế khối lượng họ c tập là hình thức buộc những sinh v iên đang bị cảnh \nbáo học tập hoặc chưa đạt chuẩn ngoại ngữ đăng ký số tín chỉ học p hần ít hơn bình \nthường, cụ thể như sau: \na) Sinh viên thuộc các chương trình đào  tạo ",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2025-05",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "medium",
+        "query": "Quy chế đào tạo 2025 có nhắc đến Thông tư 08/2021/TT-BGDĐT không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 6.21,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Tính \ntích hợp được thể h iện bằng việc thiết kế các môđun học phần trong chương trình cử \nnhân có kiến thức nền tảng liên quan chặt chẽ đến các chuyên ngành kỹ sư. \n4. Chương trình ELITECH (từ viết tắt củ a cụm từ Elite Technology Program)",
+            "scope": "shared",
+            "page_label": "4",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Sinh viên được đăng \nký tối đa 8 TC trong học kỳ hè. \nb) Sinh viên đang bị cảnh báo học tập bị giới hạn khối lượng đăng ký học tập theo \nquy định tại khoản 2 Điều 19 của Quy chế này. \n3. Sau thời gian điều chỉnh đăng ký, sinh viên có thể đề",
+            "scope": "shared",
+            "page_label": "12",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ \nsở đào tạo trong khoảng thời gian 7 tuần kể từ k hi hết thời hạn điều chỉnh đăng ký lớp \ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nử",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 4. Tín chỉ và học phần \n1. Tín chỉ (TC) là đơn vị đo khối lượng học tập. Một TC tương đương 45 giờ học \ntập bao gồm cả  giờ lên lớp và giờ tự học. Một tín chỉ học phần thông thường gồm 15 \ntiết giảng lý thuyết hoặc 30 tiết bài tập, thả",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n \nĐiều 8. Chuyển cơ sở đào tạo khác  \n1. Sinh viên đại học chuyển đến học tại một cơ sở đào tạo khác phải được sự đồng ý \ncủa Giám đốc ĐHBK Hà Nội và thủ trưởng cơ sở đào tạo chuyển đến. Sinh viên năm thứ \nnhất, sinh viên năm cuối của ",
+            "scope": "shared",
+            "page_label": "11",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.5,
+        "notes": ""
+      },
+      {
+        "id": "R2025-06",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "medium",
+        "query": "Trong phần căn cứ của QCDT 2025 có nêu Nghị định 99/2019/NĐ-CP không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.04,
+        "retrieval_latency_ms": 6.22,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ \nsở đào tạo trong khoảng thời gian 7 tuần kể từ k hi hết thời hạn điều chỉnh đăng ký lớp \ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nử",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "22 \n \nc) NCS đăng ký các học phần bổ sung thuộc chương trình (đại học, thạc sĩ) nào \nthì sẽ học theo lớp học phần thuộc chương trình đó.  \n2. Các học phần tiến sĩ nhằm nâng ca o trình độ lý thuyết, cập nhật các kiến thức \nmới nhất của lĩnh ",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Riêng việc đăng ký bổ sung \nvào các lớp học phần đã mở c hỉ thực hiện trong tuần đ ầu của học kỳ/đợt học.  Học kỳ \nhè không có đợt điều chỉnh đăng ký. \n2. Số lượng tín chỉ đăng ký: \na) Sinh viên không thuộc diện  cảnh báo học tập theo quy đ",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp không đủ thời gian \n90 ngày, NCS phải làm thủ tục xin gia hạn thời gian học tập theo quy định.  \nb) Hội đồng đánh giá luận án cấp cơ sở (sau đây gọi tắt là hội đồng cấp cơ sở) do \nHiệu tr ưởng trường tr ực thu ộc/Trưởng kho",
+            "scope": "shared",
+            "page_label": "27",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "27 \n \n \nđủ 90 ngày tính đến thời điểm kết thúc thời gian học tập chương trình tiến sĩ quy định tại \nkhoản 3 Điều 3 Quy chế này. Trong trường hợp không đủ thời gian 90 ngày, NCS phải làm \nthủ tục xin gia hạn thời gian học tập theo quy định. ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.2,
+        "notes": ""
+      },
+      {
+        "id": "R2025-07",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Mục lục của quy chế đào tạo 2025 có Điều 9 về nội dung gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 0,
+        "route_latency_ms": 1548.7,
+        "retrieval_latency_ms": 6.55,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Tin tức\nXem thêm +\nSeminar khoa học: Mô hình hồi quy Logistic cho dữ liệu bảo vệ quyền riêng tư bằng kỹ thuật Matrix Masking04/02/2026Tổng Kết Buổi Sinh Hoạt Công Dân Giữa Khóa Năm Học 2025-202618/12/2025KỶ NIỆM 43 NĂM NGÀY NHÀ GIÁO VIỆT NA",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "14 \n \n2. Hạn chế khối lượng họ c tập là hình thức buộc những sinh v iên đang bị cảnh \nbáo học tập hoặc chưa đạt chuẩn ngoại ngữ đăng ký số tín chỉ học p hần ít hơn bình \nthường, cụ thể như sau: \na) Sinh viên thuộc các chương trình đào  tạo ",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ \nsở đào tạo trong khoảng thời gian 7 tuần kể từ k hi hết thời hạn điều chỉnh đăng ký lớp \ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nử",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Đồ án/khóa luận tốt nghiệp đại học \nCác học phần tốt nghi ệp (sau đây gọi tắt là ĐATN ) bao gồm đồ án tốt nghiệp cử \nnhân, khóa luận tốt nghiệp cử nhân. \n1. Sinh viên được g iao đề tài ĐATN nếu có tổn g số tín chỉ chưa đạt không vượt \nquá 8",
+            "scope": "shared",
+            "page_label": "12",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.0,
+        "notes": ""
+      },
+      {
+        "id": "R2025-08",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Điều 5 trong QCDT 2025 nói về chủ đề nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 7.77,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "28 \n \n \nĐiều 43. Đánh giá lại luận án tiến sĩ \n1. Trong trường hợp hội đồng đánh giá luận án cấp Đại học có quyết nghị không thông \nqua luận án và cho phép bảo vệ lại, NCS được phép chỉnh sửa, bổ sung luận án và đề nghị \nbảo vệ luận án lần ",
+            "scope": "shared",
+            "page_label": "32",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "13 \n \n \n5. Tự nguyện thôi học: Sinh viên thấy không có đủ điều kiện hoặc không muốn tiếp \ntục học tại ĐHBK Hà Nội có thể làm đơn đề nghị thôi học và được xem xét cho thôi học. \nSinh viên đã có quyết định cho thôi học không được tiếp nhận tr",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n2. Hạng tốt nghiệp được xếp dựa trên điểm trung bình toàn khóa như xếp loại học \nlực quy định tại khoản 6, Điều 12 của Quy chế này, riêng trong các trường hợp sau đây \nthì hạng tốt nghiệp của học viên có điểm trung bì nh toàn khóa xếp",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "24 \n \ne) Các NCS có quyết định công nhận tại thời điểm  trước ngày 18 th áng 5 năm \n2017 phải có thêm điều kiện đạt chuẩn ng oại ngữ đầu ra tương đư ơng bậc 4/6 theo \nKhung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam.  \n2. Điều kiện để NCS đ",
+            "scope": "shared",
+            "page_label": "27",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp lu ận văn không đạt yêu cầu và học viên còn được phép học \ntối thiểu 03 tháng, học viên được phép chỉnh sửa, bổ sung luận văn để bảo vệ lần t hứ \nhai trong thời hạn 03 tháng tính từ ngày bảo vệ luận văn lần thứ nhất. \n2. Tr",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2025-09",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "QCDT 2025 có chương nào về đào tạo đại học không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.31,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Tính \ntích hợp được thể h iện bằng việc thiết kế các môđun học phần trong chương trình cử \nnhân có kiến thức nền tảng liên quan chặt chẽ đến các chuyên ngành kỹ sư. \n4. Chương trình ELITECH (từ viết tắt củ a cụm từ Elite Technology Program)",
+            "scope": "shared",
+            "page_label": "4",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "17 \n \nCHƯƠNG IV \nĐÀO TẠO THẠC SĨ \nĐiều 27. Đăng ký học tập chương trình thạc sĩ \n1. Đăng ký học phần: Học viên thực hiện quy trình đăng ký học phần từ tài khoản \nhọc tập cá nhân theo kế hoạ ch học tập chuẩn hoặc theo kế hoạch cá nhân. Học v",
+            "scope": "shared",
+            "page_label": "20",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Liên kết web\nCổng thông tin sinh viên\nThư viện Tạ Quang Bửu\nThư điện tử ĐHBK HN\nHệ thống quản trị ĐH trực tuyến\nCổng thông tin đào tạo\n \n\n\n Cơ hội nghề nghiệp\n\n\n\nGame Designer Intern/Fresher tại Falcon Game Studio\n\n17/03/2026\n\n\n\n📢 THÔNG BÁO",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Sinh viên thi hộ hoặc nhờ  người thi hộ đều bị kỷ luật ở mức đình chỉ  học tập \n01 năm đối với trường hợp vi  phạm lần thứ nhất và buộc t hôi học đối với trường hợp \nvi phạm lần thứ hai. \n3. Sinh viên sử dụng chứng chỉ ngoại ngữ giả hoặc",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 31. Điều kiện được bảo vệ luận văn thạc sĩ \nHọc viên có đủ các điều kiện sau đây thì được bảo vệ luận văn thạc sĩ: \n1. Đã hoàn thành và đạt các học phần theo yêu cầu của CTĐT. \n2. Đạt chuẩn ngoại ngữ đầu ra tương đương bậc 4/6 theo Khu",
+            "scope": "shared",
+            "page_label": "24",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.2,
+        "notes": ""
+      },
+      {
+        "id": "R2025-10",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Trong mục lục QCDT 2025, Điều 3 nói về vấn đề gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 4.77,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Học viên bị ốm h oặc tai nạn  buộc phải điều trị trong thời gian dài , hoặc nghỉ \nthai sản theo quy định được phép nghỉ học tạm thời. Thời gian nghỉ học tạm thời ( là \nthời gian được ghi trong giấy xác nhận của cơ sở khám, chữa bệnh có t",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "13 \n \n \n5. Tự nguyện thôi học: Sinh viên thấy không có đủ điều kiện hoặc không muốn tiếp \ntục học tại ĐHBK Hà Nội có thể làm đơn đề nghị thôi học và được xem xét cho thôi học. \nSinh viên đã có quyết định cho thôi học không được tiếp nhận tr",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian \nnghỉ học tối đa  cho phép là 4 học kỳ chính và được tính  vào thời gian học chậm tiến \nđộ. \nđ) Sinh viên phải nộp đơn  đề nghị trở lại học chậm  nhất 1 tuần trước khi bắ t đầu \nhọc kỳ mới. Đối với trường hợp được điều động  vào l",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "22 \n \nc) NCS đăng ký các học phần bổ sung thuộc chương trình (đại học, thạc sĩ) nào \nthì sẽ học theo lớp học phần thuộc chương trình đó.  \n2. Các học phần tiến sĩ nhằm nâng ca o trình độ lý thuyết, cập nhật các kiến thức \nmới nhất của lĩnh ",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Sinh viên thi hộ hoặc nhờ  người thi hộ đều bị kỷ luật ở mức đình chỉ  học tập \n01 năm đối với trường hợp vi  phạm lần thứ nhất và buộc t hôi học đối với trường hợp \nvi phạm lần thứ hai. \n3. Sinh viên sử dụng chứng chỉ ngoại ngữ giả hoặc",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.5,
+        "notes": ""
+      },
+      {
+        "id": "R2025-11",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "QCDT 2025 có Điều 4 về tín chỉ và học phần đúng không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.72,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường hợp không đ ược thông \nqua phải thực hiện đăng ký lại.  \n4. Ngay sau khi nhận quyết định giao đề tài, học viên phải xây dựng kế hoạc h \nthực hiện luận văn thạc sĩ và được người hướng dẫn đồng ý. \nĐiều 30. Điều kiện được bảo vệ lu",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Đăng ký tốt nghiệp đại học \n1. Trường ĐHBK Hà Nội xét tốt nghiệp nhiều đợt trong năm, cụ  thể là cuối mỗi \nđợt học A, B của các học kỳ chính và cuối học kỳ hè. Sinh viên muốn được xét tốt \nnghiệp phải đăng ký theo các mốc thời gian quy định",
+            "scope": "shared",
+            "page_label": "13",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Sinh viên thi hộ hoặc nhờ  người thi hộ đều bị kỷ luật ở mức đình chỉ  học tập \n01 năm đối với trường hợp vi  phạm lần thứ nhất và buộc t hôi học đối với trường hợp \nvi phạm lần thứ hai. \n3. Sinh viên sử dụng chứng chỉ ngoại ngữ giả hoặc",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "19 \n \nnước ngoài, hoặc bằng tốt nghiệp trình độ đại học trở lên ngàn h khác mà chương trình \nđược thực hiện hoàn toàn bằng ngôn ngữ nước ngoài;  \n3. Điểm trung bình tích lũy (CPA) đạt từ 2,0 trở lên; \n4. Người hướng dẫn và các phản biện xác",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.14285714285714285,
+        "notes": ""
+      },
+      {
+        "id": "R2025-12",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "medium",
+        "query": "Điều 6 trong QCDT 2025 đề cập những nội dung nào liên quan đến thi cử?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.02,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Hội đồng đánh giá luận văn cho điểm bảo vệ luận văn từ 8,5 trở lên chỉ khi học viên có \ncông bố khoa học hợp lệ. \nb) Điểm thưởng công bố khoa học đối với học viên có thành tích công bố khoa \nhọc sau đây: có bài báo khoa  học liên quan đến n",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Căn cứ Thông tư số 18/2021/TT-BGDĐT ngày 28 tháng 06 năm 2021 của Bộ Giáo \ndục và Đào tạo ban hành Quy chế tuyển sinh và đào tạo trình độ tiến sĩ; \nCăn cứ Thông tư số 23/2021/TT -BGDĐT ngày 30 tháng 08 năm 2021 của Bộ Giáo \ndục và Đào tạo b",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Việc tổ chức thi lại phải hoàn thành chậm nhất trước khi bắt đầu \nhọc kỳ chính kế ti ếp. Điểm học phần sau khi t hi lại bị giới hạn không vượt quá mức \nđiểm C.  \n3. Người học không dự th i giữa kỳ do bị ốm, tai  nạn hoặc vì lý do chính đán ",
+            "scope": "shared",
+            "page_label": "8",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "4 \n \n4. Chương trình học tập có thể bao gồm các nhóm học phần bắt buộc và học phần \ntự chọn như sau: \na) Nhóm học phần bắt buộc: ngườ i h ọc phải ho àn thành tất cả h ọc phần  trong \ndanh mục quy định.  \nb) Nhóm học phần tự chọn theo mô đun",
+            "scope": "shared",
+            "page_label": "7",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nSố:                 /QĐ-ĐHBK   Hà Nội, ngày        tháng      năm 2025 \n \nQUYẾT ĐỊNH \nVề việc ban hành Quy chế ",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.5,
+        "notes": ""
+      },
+      {
+        "id": "R2025-13",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "medium",
+        "query": "Điều 7 trong mục lục QCDT 2025 nói về chỉ số học tập nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 5.08,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "7. Sinh viên được công nhận tốt nghiệp cả hai CTĐT sẽ được cấp hai bằng tốt nghiệp \nvà hai phụ lục văn bằng tương ứng. \nĐiều 19. Cảnh báo học tập và buộc thôi học \n1. Kết quả học tập được đánh giá vào cuối mỗi học kỳ chính để xác định mức đ",
+            "scope": "shared",
+            "page_label": "18",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "19 \n \nnước ngoài, hoặc bằng tốt nghiệp trình độ đại học trở lên ngàn h khác mà chương trình \nđược thực hiện hoàn toàn bằng ngôn ngữ nước ngoài;  \n3. Điểm trung bình tích lũy (CPA) đạt từ 2,0 trở lên; \n4. Người hướng dẫn và các phản biện xác",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điểm thưởng công bố khoa học \ndo hội đồng đánh giá luận văn quyết định, nằm trong khoảng từ 0,5 đến 1,5. \n2. Hội đồng đánh giá luận văn cho điểm bảo vệ luận văn từ 8,5 trở lên chỉ khi học \nviên có công bố khoa học liên quan đến nội dung luậ",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Hội đồng đánh giá luận văn cho điểm bảo vệ luận văn từ 8,5 trở lên chỉ khi học viên có \ncông bố khoa học hợp lệ. \nb) Điểm thưởng công bố khoa học đối với học viên có thành tích công bố khoa \nhọc sau đây: có bài báo khoa  học liên quan đến n",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp lu ận văn không đạt yêu cầu và học viên còn được phép học \ntối thiểu 03 tháng, học viên được phép chỉnh sửa, bổ sung luận văn để bảo vệ lần t hứ \nhai trong thời hạn 03 tháng tính từ ngày bảo vệ luận văn lần thứ nhất. \n2. Tr",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2025-14",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "medium",
+        "query": "Trong QCDT 2025, Điều 8 nói về việc gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 5.87,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nSố:                 /QĐ-ĐHBK   Hà Nội, ngày        tháng      năm 2025 \n \nQUYẾT ĐỊNH \nVề việc ban hành Quy chế ",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp lu ận văn không đạt yêu cầu và học viên còn được phép học \ntối thiểu 03 tháng, học viên được phép chỉnh sửa, bổ sung luận văn để bảo vệ lần t hứ \nhai trong thời hạn 03 tháng tính từ ngày bảo vệ luận văn lần thứ nhất. \n2. Tr",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "b) Sinh viên bị  Hội đồng kỷ lu ật của Trường  ĐHBK Hà Nội  đề nghị áp dụn g \nmức kỷ luật từ cảnh cáo trở lên. \nĐiều 16. Nghỉ học tạm thời và tự nguyện thôi học  \n1. Điều kiện nghỉ học tạm thời, thời gian nghỉ học t ối đa và việc tiếp nhận ",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Tính \ntích hợp được thể h iện bằng việc thiết kế các môđun học phần trong chương trình cử \nnhân có kiến thức nền tảng liên quan chặt chẽ đến các chuyên ngành kỹ sư. \n4. Chương trình ELITECH (từ viết tắt củ a cụm từ Elite Technology Program)",
+            "scope": "shared",
+            "page_label": "4",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian \nnghỉ học tối đa  cho phép là 4 học kỳ chính và được tính  vào thời gian học chậm tiến \nđộ. \nđ) Sinh viên phải nộp đơn  đề nghị trở lại học chậm  nhất 1 tuần trước khi bắ t đầu \nhọc kỳ mới. Đối với trường hợp được điều động  vào l",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2025-15",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "medium",
+        "query": "Quy chế đào tạo 2025 được giới thiệu là ban hành kèm theo quyết định của ai?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.32,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "14 \n \n2. Hạn chế khối lượng họ c tập là hình thức buộc những sinh v iên đang bị cảnh \nbáo học tập hoặc chưa đạt chuẩn ngoại ngữ đăng ký số tín chỉ học p hần ít hơn bình \nthường, cụ thể như sau: \na) Sinh viên thuộc các chương trình đào  tạo ",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n2. Hạng tốt nghiệp được xếp dựa trên điểm trung bình toàn khóa như xếp loại học \nlực quy định tại khoản 6, Điều 12 của Quy chế này, riêng trong các trường hợp sau đây \nthì hạng tốt nghiệp của học viên có điểm trung bì nh toàn khóa xếp",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ \nsở đào tạo trong khoảng thời gian 7 tuần kể từ k hi hết thời hạn điều chỉnh đăng ký lớp \ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nử",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Riêng việc đăng ký bổ sung \nvào các lớp học phần đã mở c hỉ thực hiện trong tuần đ ầu của học kỳ/đợt học.  Học kỳ \nhè không có đợt điều chỉnh đăng ký. \n2. Số lượng tín chỉ đăng ký: \na) Sinh viên không thuộc diện  cảnh báo học tập theo quy đ",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.14285714285714285,
+        "notes": ""
+      },
+      {
+        "id": "R2025-16",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "hard",
+        "query": "Trong phần ký văn bản của QCDT 2025, người ký với chức vụ gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 4.59,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường hợp không đ ược thông \nqua phải thực hiện đăng ký lại.  \n4. Ngay sau khi nhận quyết định giao đề tài, học viên phải xây dựng kế hoạc h \nthực hiện luận văn thạc sĩ và được người hướng dẫn đồng ý. \nĐiều 30. Điều kiện được bảo vệ lu",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Việc tổ chức thi lại phải hoàn thành chậm nhất trước khi bắt đầu \nhọc kỳ chính kế ti ếp. Điểm học phần sau khi t hi lại bị giới hạn không vượt quá mức \nđiểm C.  \n3. Người học không dự th i giữa kỳ do bị ốm, tai  nạn hoặc vì lý do chính đán ",
+            "scope": "shared",
+            "page_label": "8",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Tin tức\nXem thêm +\nSeminar khoa học: Mô hình hồi quy Logistic cho dữ liệu bảo vệ quyền riêng tư bằng kỹ thuật Matrix Masking04/02/2026Tổng Kết Buổi Sinh Hoạt Công Dân Giữa Khóa Năm Học 2025-202618/12/2025KỶ NIỆM 43 NĂM NGÀY NHÀ GIÁO VIỆT NA",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợ p quá thời hạn 2 năm  nhưng không thể hoàn thành, NCS \ncó thể đề nghị xin gia hạn thời gian thực hiện trong khoảng thời gian 6 tháng kế tiếp; \nquá thời hạn trên vẫn không thể hoàn thành thì bị xem xét cho thôi học. \nĐiều 38.",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "0 điểm trở lên tính theo điểm \nđối đa do Hội đồng Giáo sư nhà nước quy định ch o mỗi loại công trình (kh ông chia \nđiểm khi có đồng tác giả); \nd) Luận án đã được góp ý và đánh giá qua các hội thảo chuyên môn, trong đó hội \nthảo lần cuối  có",
+            "scope": "shared",
+            "page_label": "26",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.09090909090909091,
+        "notes": ""
+      },
+      {
+        "id": "R2025-17",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Quy chế đào tạo 2025 có phạm vi điều chỉnh và đối tượng áp dụng ở điều nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 5.82,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "14 \n \n2. Hạn chế khối lượng họ c tập là hình thức buộc những sinh v iên đang bị cảnh \nbáo học tập hoặc chưa đạt chuẩn ngoại ngữ đăng ký số tín chỉ học p hần ít hơn bình \nthường, cụ thể như sau: \na) Sinh viên thuộc các chương trình đào  tạo ",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian theo kế hoạch học tập chuẩn toàn khoá đối với hình thức đào tạo vừa \nlàm vừa h ọc dài h ơn tối t hiểu 20% so với hình thức đào tạo chính quy của cùng \nchương trình đào tạo. \n7. Các CTĐT cấp bằng cử nhân, kỹ sư, thạc sĩ, tiến sĩ đư",
+            "scope": "shared",
+            "page_label": "5",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n2. Hạng tốt nghiệp được xếp dựa trên điểm trung bình toàn khóa như xếp loại học \nlực quy định tại khoản 6, Điều 12 của Quy chế này, riêng trong các trường hợp sau đây \nthì hạng tốt nghiệp của học viên có điểm trung bì nh toàn khóa xếp",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "30 \n \n \nCHƯƠNG VI \nTỔ CHỨC THỰC HIỆN \nĐiều 47. Quy định chuyển tiếp \n1. Đối với các khoá tuyển sinh có quyết định công nhận NCS sau ngày 01 tháng 8 \nnăm 2025, ĐHBK Hà Nội thực hiện theo quy định của Quy chế tuyển sinh và đào tạo trình \nđộ t",
+            "scope": "shared",
+            "page_label": "34",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "11 \n \nGiáo dục quốc phòng-an ninh hoặc Giáo dục thể chất, trong thời hạn tối đa 03 năm kể \ntừ khi hết thờ i hạn học tập được  phép đăng ký học để hoàn thiện c ác học phần còn \nthiếu này và đề nghị xét công nhận tốt nghiệp. \n6. Sinh viên khô",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.25,
+        "notes": ""
+      },
+      {
+        "id": "R2025-18",
+        "tenant_id": "t_m_t_t_file_qcdt_2025_5445_qd-dhbk_pdf",
+        "category": "regulation_2025",
+        "difficulty": "easy",
+        "query": "Trang mục lục của QCDT 2025 có phần nào nói về học phí?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.29,
+        "relevant_sources": [
+          "QCDT_2025_5445_QD-DHBK.pdf"
+        ],
+        "results": [
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Tin tức\nXem thêm +\nSeminar khoa học: Mô hình hồi quy Logistic cho dữ liệu bảo vệ quyền riêng tư bằng kỹ thuật Matrix Masking04/02/2026Tổng Kết Buổi Sinh Hoạt Công Dân Giữa Khóa Năm Học 2025-202618/12/2025KỶ NIỆM 43 NĂM NGÀY NHÀ GIÁO VIỆT NA",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "2 \n \n \nưu hóa thời gian đào tạo cho người học. CTĐT tích hợp cử nhân-kỹ sư, cử nhân-thạc sĩ có \nthời gian thiết kế là 5,5 năm và khối lượng học tập 180 TC. CTĐT tích hợp bao gồm hai \nbậc trình độ: Cử nhân (thời gian đào tạo 4 năm, trình độ ",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "19 \n \nnước ngoài, hoặc bằng tốt nghiệp trình độ đại học trở lên ngàn h khác mà chương trình \nđược thực hiện hoàn toàn bằng ngôn ngữ nước ngoài;  \n3. Điểm trung bình tích lũy (CPA) đạt từ 2,0 trở lên; \n4. Người hướng dẫn và các phản biện xác",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "5 \n \n \ntrình, cách thức đánh giá học phần, nội dung học tập, phương thức và ngôn ngữ giảng dạy, \ngiáo trình và tài liệu tham khảo. \nĐiều 5. Điểm học phần \n1. Một học phần từ 2 TC trở lên được đánh giá từ hai điểm thành phần là điểm quá \ntrì",
+            "scope": "shared",
+            "page_label": "9",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.5,
+        "notes": ""
+      },
+      {
+        "id": "R2021-01",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "Quy chế đào tạo 2021 được ban hành kèm theo quyết định số bao nhiêu?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.04,
+        "retrieval_latency_ms": 9.37,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "8 \n \n \nCHƯƠNG II \nĐÀO TẠO ĐẠI HỌC \nĐiều 10. Đăng ký học tập chương trình đại học \n1. Đăng ký học tập là quy trình bắt buộc của sinh viên cho mỗi học kỳ, trừ các sinh \nviên mới nhập học được xếp thời khóa biểu theo kế hoạch học tập chuẩn, kh",
+            "scope": "shared",
+            "page_label": "12",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Riêng việc đăng ký bổ sung \nvào các lớp học phần đã mở c hỉ thực hiện trong tuần đ ầu của học kỳ/đợt học.  Học kỳ \nhè không có đợt điều chỉnh đăng ký. \n2. Số lượng tín chỉ đăng ký: \na) Sinh viên không thuộc diện  cảnh báo học tập theo quy đ",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "10 \n \n2. Đối với loại hình li ên thông, sinh viê n được giao đề tài ĐATN nế u có tổng số \ntín chỉ chưa đạt không vượt quá 8 TC so với yêu cầu của chương trình đào tạo , không \ntính số tín chỉ của  các học phần thực tập tốt nghi ệp, ĐATN và ",
+            "scope": "shared",
+            "page_label": "13",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7. NCS thấy không có đủ điều kiện hoặc không muốn tiếp tục học tại Trường \nĐHBK Hà Nội có thể làm đơn đề nghị thôi học và được xem xét cho thôi học.  \nĐiều 45. Công nhận và chuyển đổi kết quả học tập, nghiên cứu \n1. Kết quả học tập, nghiên ",
+            "scope": "shared",
+            "page_label": "29",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường \nhợp đặc biệt sẽ do Giám đốc ĐHBK Hà Nội quyết định. \n3. Đối với trường hợp xin nghỉ học tạm thời vì những lý do khác với lý do tại khoản \n1 và khoản 2 Điều này thì thời gian nghỉ học tối đa cho phép là 02 học kỳ chính và được \nt",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.5,
+        "notes": ""
+      },
+      {
+        "id": "R2021-02",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "Văn bản QCDT 2021 do trường nào ban hành?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 6.56,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nQUY CHẾ ĐÀO TẠO \n(Ban hành kèm theo Quyết định số                 /QĐ-ĐHBK, ngày        tháng        năm 2025 \n",
+            "scope": "shared",
+            "page_label": "5",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "21 \n \n \nhoàn toàn bằng ngôn ngữ nước ngoài. Yêu cầu ngoại ngữ đầu vào và ngoại ngữ đầu ra phải \ncùng một ngôn ngữ. \n3. Người hướng dẫn và phản biện xác nhận bản thảo luận văn đã đáp ứng đầy đủ các \nyêu cầu về chất lượng và nội dung khoa học",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 5. Điểm học phần \n1. Một học phần từ 2 T C trở lên được đánh giá từ h ai điểm t hành phần là điểm \nquá trình và điểm cuối kỳ, trong đó điểm cuối kỳ có  trọng số từ 0,5 đến 0,8 theo quy \nđịnh trong đề cương chi tiết học phần. Các học ph",
+            "scope": "shared",
+            "page_label": "7",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 38. Học phần bổ sung và học phần tiến sĩ \n1. Các học phần bổ sung nhằm hỗ trợ NCS có đủ kiến thức, trình độ chuyên môn để \nthực hiện đề tài nghiên cứu.  \na) Đối với NCS đã có bằng thạc sĩ: khối lượng kiến thức cần phải học bổ sung được",
+            "scope": "shared",
+            "page_label": "28",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Khoa Toán - Tin, ĐH Bách Khoa Hà Nội\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nĐại học Bách Khoa Hà Nội\n\n \n \n\n\n\n\n\n\n\n\n\n  English\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\nToggle navigation\n\n\n\n\n\n\nGiới thiệu \n\nGiới thiệu chung\nSứ mạng và Tầm nhìn\nTriết lý giáo dục\nCơ ",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.3333333333333333,
+        "notes": ""
+      },
+      {
+        "id": "R2021-03",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "Quy chế đào tạo 2021 được ký ngày nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 5.94,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \n \n \n \n \n \n \n \n \n \n \nQUY CHẾ  ĐÀO TẠO \n(Ban hành kèm theo Quyết định số                 /QĐ-ĐHBK, ngày        tháng        năm 2025 \ncủa Giám đốc Đại học Bách khoa Hà Nội) \n \n \n \n \n \n \n \n \n \n",
+            "scope": "shared",
+            "page_label": "2",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Sinh viên \nthuộc diện này sẽ bị xét buộc thôi học nếu nghỉ quá 04 học kỳ chính. \nđ) Sinh viên phải nộp đơn đề nghị tiếp nhận trở lại học chậm nhất 1 tuần trước khi \nbắt đầu học kỳ mới. Đối với trường hợp được điều động vào lực lượng vũ tran",
+            "scope": "shared",
+            "page_label": "16",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "18 \n \n \n6. Khi chế độ nghỉ tạm thời có hiệu lực thì các học phần đã đăng ký học trong học kỳ \nsẽ bị hủy và tính học phí theo quy định tại khoản 4 Điều 9 Quy chế này, ngoại trừ các \ntrường hợp được quy định tại khoản 1 và khoản 2 Điều 25 Quy",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "15 \n \n \ntập này không phụ thuộc vào điều kiện nâng mức cảnh báo học tập tại mục a và mục b \nkhoản này. \ne) Không xét cảnh báo học tập với học kỳ hè. \n2. Hạn chế khối lượng học tập là hình thức buộc những sinh viên đang bị cảnh báo \nhọc tập ",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Chương trình ELITECH có mức độ quốc tế hóa cao \nvới ngôn ngữ dạy và học chủ yếu bằng tiếng Anh hoặc có thể bằng các ngoại ngữ khác đáp \nứng mục tiêu của chương trình. CTĐT được xây dựng trên cơ sở tham chiếu chương trình \ntương đương của cá",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.1,
+        "notes": ""
+      },
+      {
+        "id": "R2021-04",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "Điều 9 của QCDT 2021 nói về nội dung gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 0,
+        "route_latency_ms": 1395.43,
+        "retrieval_latency_ms": 9.04,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điểm thưởng công bố khoa học \ndo hội đồng đánh giá luận văn quyết định, nằm trong khoảng từ 0,5 đến 1,5. \n2. Hội đồng đánh giá luận văn cho điểm bảo vệ luận văn từ 8,5 trở lên chỉ khi học \nviên có công bố khoa học liên quan đến nội dung luậ",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "11 \n \n \nb) Các điểm của người hướng dẫn, phản biện và thành viên hội đồng đánh giá ĐATN \nđược phép cho lẻ tới 0,5 điểm. \nc) Điểm quá trình của ĐATN được tính bằng trung bình cộng điểm của người hướng \ndẫn và điểm của người phản biện, làm tr",
+            "scope": "shared",
+            "page_label": "15",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "CHƯƠNG I \nNHỮNG QUY ĐỊNH CHUNG \nĐiều 1. Phạm vi điều chỉnh và đối tượng áp dụng \n1. Quy chế này quy định về công tác đào tạo đối với các khóa đào tạo theo hình \nthức chính quy, vừa làm vừa học  và cấp văn bằng cử nhân, kỹ sư , thạc sĩ hoặc ",
+            "scope": "shared",
+            "page_label": "4",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "27 \n \n \nđủ 90 ngày tính đến thời điểm kết thúc thời gian học tập chương trình tiến sĩ quy định tại \nkhoản 3 Điều 3 Quy chế này. Trong trường hợp không đủ thời gian 90 ngày, NCS phải làm \nthủ tục xin gia hạn thời gian học tập theo quy định. ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Đăng ký tốt nghiệp đại học \n1. Trường ĐHBK Hà Nội xét tốt nghiệp nhiều đợt trong năm, cụ  thể là cuối mỗi \nđợt học A, B của các học kỳ chính và cuối học kỳ hè. Sinh viên muốn được xét tốt \nnghiệp phải đăng ký theo các mốc thời gian quy định",
+            "scope": "shared",
+            "page_label": "13",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.3333333333333333,
+        "notes": ""
+      },
+      {
+        "id": "R2021-05",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "medium",
+        "query": "Trong QCDT 2021, Điều 10 thuộc chương nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.63,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "3 \n \n \n8. Các CTĐT cấp bằng cử nhân, kỹ sư, thạc sĩ, tiến sĩ được công bố công khai trước \nkhi tuyển sinh, phù hợp với các quy định hiện hành của Bộ GDĐT và chuẩn CTĐT của \nĐHBK Hà Nội. \n9. CTĐT có thể được điều chỉnh và áp dụng cho từng kh",
+            "scope": "shared",
+            "page_label": "7",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "2 \n \n \nưu hóa thời gian đào tạo cho người học. CTĐT tích hợp cử nhân-kỹ sư, cử nhân-thạc sĩ có \nthời gian thiết kế là 5,5 năm và khối lượng học tập 180 TC. CTĐT tích hợp bao gồm hai \nbậc trình độ: Cử nhân (thời gian đào tạo 4 năm, trình độ ",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường \nhợp đặc biệt sẽ do Giám đốc ĐHBK Hà Nội quyết định. \n3. Đối với trường hợp xin nghỉ học tạm thời vì những lý do khác với lý do tại khoản \n1 và khoản 2 Điều này thì thời gian nghỉ học tối đa cho phép là 02 học kỳ chính và được \nt",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "27 \n \n \nđủ 90 ngày tính đến thời điểm kết thúc thời gian học tập chương trình tiến sĩ quy định tại \nkhoản 3 Điều 3 Quy chế này. Trong trường hợp không đủ thời gian 90 ngày, NCS phải làm \nthủ tục xin gia hạn thời gian học tập theo quy định. ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "28 \n \n \nĐiều 43. Đánh giá lại luận án tiến sĩ \n1. Trong trường hợp hội đồng đánh giá luận án cấp Đại học có quyết nghị không thông \nqua luận án và cho phép bảo vệ lại, NCS được phép chỉnh sửa, bổ sung luận án và đề nghị \nbảo vệ luận án lần ",
+            "scope": "shared",
+            "page_label": "32",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.09090909090909091,
+        "notes": ""
+      },
+      {
+        "id": "R2021-06",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "Điều 10 của quy chế đào tạo 2021 nói về việc gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 5.8,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n2. Hạng tốt nghiệp được xếp dựa trên điểm trung bình toàn khóa như xếp loại học \nlực quy định tại khoản 6, Điều 12 của Quy chế này, riêng trong các trường hợp sau đây \nthì hạng tốt nghiệp của học viên có điểm trung bì nh toàn khóa xếp",
+            "scope": "shared",
+            "page_label": "19",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "11 \n \nGiáo dục quốc phòng-an ninh hoặc Giáo dục thể chất, trong thời hạn tối đa 03 năm kể \ntừ khi hết thờ i hạn học tập được  phép đăng ký học để hoàn thiện c ác học phần còn \nthiếu này và đề nghị xét công nhận tốt nghiệp. \n6. Sinh viên khô",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ \nsở đào tạo trong khoảng thời gian 7 tuần kể từ k hi hết thời hạn điều chỉnh đăng ký lớp \ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nử",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Hội nghị Sinh viên NCKH năm học 2024-2025\nThời gian: 08:00, ngày 17/05/2025 (Thứ Bảy)\nĐịa điểm: C7-219\n\n\n\n\n\n\n\n\nĐào tạo Đại học\nXem thêm +\nCác chuyên ngành đào tạo đại học tại Viện Toán ứng dụng và Tin học – ĐH Bách Khoa HN14/03/2024Giới thi",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2021-07",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "QCDT 2021 có Điều 11 về nội dung nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.04,
+        "retrieval_latency_ms": 5.6,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điểm thưởng công bố khoa học \ndo hội đồng đánh giá luận văn quyết định, nằm trong khoảng từ 0,5 đến 1,5. \n2. Hội đồng đánh giá luận văn cho điểm bảo vệ luận văn từ 8,5 trở lên chỉ khi học \nviên có công bố khoa học liên quan đến nội dung luậ",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nSố:                 /QĐ-ĐHBK   Hà Nội, ngày        tháng      năm 2025 \n \nQUYẾT ĐỊNH \nVề việc ban hành Quy chế ",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "21 \n \n \nhoàn toàn bằng ngôn ngữ nước ngoài. Yêu cầu ngoại ngữ đầu vào và ngoại ngữ đầu ra phải \ncùng một ngôn ngữ. \n3. Người hướng dẫn và phản biện xác nhận bản thảo luận văn đã đáp ứng đầy đủ các \nyêu cầu về chất lượng và nội dung khoa học",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp lu ận văn không đạt yêu cầu và học viên còn được phép học \ntối thiểu 03 tháng, học viên được phép chỉnh sửa, bổ sung luận văn để bảo vệ lần t hứ \nhai trong thời hạn 03 tháng tính từ ngày bảo vệ luận văn lần thứ nhất. \n2. Tr",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Việc thay đổi đề tài, thay đổi người hướng dẫn phải được thực \nhiện tối thiểu trước 6 tháng so với thời điểm hết hạn đào tạo (tính cả thời gian gia h ạn nếu \ncó).  \nĐiều 30. Luận văn thạc sĩ \n1. Luận văn là một báo cáo khoa học, tổng hợp cá",
+            "scope": "shared",
+            "page_label": "24",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.25,
+        "notes": ""
+      },
+      {
+        "id": "R2021-08",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "medium",
+        "query": "Điều 12 trong QCDT 2021 nói về phản hồi hay đánh giá nào của người học?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.23,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "d) Luận án chỉ được đề nghị đưa ra đánh giá ở hội đồng đánh giá luận án cấp Đại học \nkhi có tối thiểu 6 thành viên của hội đồng cấp cơ sở ở lần đánh giá cuối cùng đồng ý thông \nqua (ghi trong phiếu nhận xét luận án). \nđ) Trong vòng 20 ngày ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Tiểu luận tổng quan được đánh giá đạt nếu được người hướng dẫn và đơn vị chuyên \nmôn thông qua. \nb) NCS phải hoàn thành tiểu luận tổng quan với kết quả đạt trong thời hạn 12 tháng \nkể từ khi có quyết định công nhận NCS.  \n2. Các chuyên đề t",
+            "scope": "shared",
+            "page_label": "29",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "27 \n \n \nđủ 90 ngày tính đến thời điểm kết thúc thời gian học tập chương trình tiến sĩ quy định tại \nkhoản 3 Điều 3 Quy chế này. Trong trường hợp không đủ thời gian 90 ngày, NCS phải làm \nthủ tục xin gia hạn thời gian học tập theo quy định. ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "3. Đối với trường hợp xin nghỉ học tạm thời vì những lý do khác với lý do tại khoản \n1 và khoản 2 Điều này, học viên phải học ít nhất một học kỳ tại ĐHBK Hà Nội, không \nthuộc các trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật, mới",
+            "scope": "shared",
+            "page_label": "26",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp không đủ thời gian \n90 ngày, NCS phải làm thủ tục xin gia hạn thời gian học tập theo quy định.  \nb) Hội đồng đánh giá luận án cấp cơ sở (sau đây gọi tắt là hội đồng cấp cơ sở) do \nHiệu tr ưởng trường tr ực thu ộc/Trưởng kho",
+            "scope": "shared",
+            "page_label": "27",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.2,
+        "notes": ""
+      },
+      {
+        "id": "R2021-09",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "Điều 13 của QCDT 2021 có liên quan đến đồ án hay khóa luận gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 6.93,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợ p quá thời hạn 2 năm  nhưng không thể hoàn thành, NCS \ncó thể đề nghị xin gia hạn thời gian thực hiện trong khoảng thời gian 6 tháng kế tiếp; \nquá thời hạn trên vẫn không thể hoàn thành thì bị xem xét cho thôi học. \nĐiều 38.",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian theo kế hoạch học tập chuẩn toàn khoá đối với hình thức đào tạo vừa \nlàm vừa h ọc dài h ơn tối t hiểu 20% so với hình thức đào tạo chính quy của cùng \nchương trình đào tạo. \n7. Các CTĐT cấp bằng cử nhân, kỹ sư, thạc sĩ, tiến sĩ đư",
+            "scope": "shared",
+            "page_label": "5",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "27 \n \n \nđủ 90 ngày tính đến thời điểm kết thúc thời gian học tập chương trình tiến sĩ quy định tại \nkhoản 3 Điều 3 Quy chế này. Trong trường hợp không đủ thời gian 90 ngày, NCS phải làm \nthủ tục xin gia hạn thời gian học tập theo quy định. ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Trong trường hợp không đủ thời gian \n90 ngày, NCS phải làm thủ tục xin gia hạn thời gian học tập theo quy định.  \nb) Hội đồng đánh giá luận án cấp cơ sở (sau đây gọi tắt là hội đồng cấp cơ sở) do \nHiệu tr ưởng trường tr ực thu ộc/Trưởng kho",
+            "scope": "shared",
+            "page_label": "27",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "28 \n \n \nĐiều 43. Đánh giá lại luận án tiến sĩ \n1. Trong trường hợp hội đồng đánh giá luận án cấp Đại học có quyết nghị không thông \nqua luận án và cho phép bảo vệ lại, NCS được phép chỉnh sửa, bổ sung luận án và đề nghị \nbảo vệ luận án lần ",
+            "scope": "shared",
+            "page_label": "32",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2021-10",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "QCDT 2021 có Điều 14 về đăng ký tốt nghiệp đại học không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.36,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "11 \n \n \nb) Các điểm của người hướng dẫn, phản biện và thành viên hội đồng đánh giá ĐATN \nđược phép cho lẻ tới 0,5 điểm. \nc) Điểm quá trình của ĐATN được tính bằng trung bình cộng điểm của người hướng \ndẫn và điểm của người phản biện, làm tr",
+            "scope": "shared",
+            "page_label": "15",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "19 \n \n \nCHƯƠNG IV \nĐÀO TẠO THẠC SĨ \nĐiều 27. Đăng ký học tập chương trình thạc sĩ \n1. Đăng ký học tập: Học viên thực hiện quy trình đăng ký học từ tài khoản học tập cá \nnhân theo kế hoạch học tập chuẩn hoặc theo kế hoạch cá nhân. Học viên đ",
+            "scope": "shared",
+            "page_label": "23",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ không được vượt quá 3 học kỳ chính và không vượt \nquá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 3 năm đến 4 năm. Nếu NCS đăng \nký học tập, nghiên cứu với khố",
+            "scope": "shared",
+            "page_label": "7",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "2 \n \n \nưu hóa thời gian đào tạo cho người học. CTĐT tích hợp cử nhân-kỹ sư, cử nhân-thạc sĩ có \nthời gian thiết kế là 5,5 năm và khối lượng học tập 180 TC. CTĐT tích hợp bao gồm hai \nbậc trình độ: Cử nhân (thời gian đào tạo 4 năm, trình độ ",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 31. Điều kiện được bảo vệ luận văn thạc sĩ \nHọc viên có đủ các điều kiện sau đây thì được bảo vệ luận văn thạc sĩ: \n1. Đã hoàn thành và đạt các học phần theo yêu cầu của CTĐT. \n2. Đạt chuẩn ngoại ngữ đầu ra tương đương bậc 4/6 theo Khu",
+            "scope": "shared",
+            "page_label": "24",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 0,
+        "mrr": 0.1,
+        "notes": ""
+      },
+      {
+        "id": "R2021-11",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "medium",
+        "query": "Điều 15 của quy chế đào tạo 2021 nói về chỉ số nào khi tốt nghiệp?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 4.49,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điểm thưởng công bố khoa học \ndo hội đồng đánh giá luận văn quyết định, nằm trong khoảng từ 0,5 đến 1,5. \n2. Hội đồng đánh giá luận văn cho điểm bảo vệ luận văn từ 8,5 trở lên chỉ khi học \nviên có công bố khoa học liên quan đến nội dung luậ",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "d) Luận án chỉ được đề nghị đưa ra đánh giá ở hội đồng đánh giá luận án cấp Đại học \nkhi có tối thiểu 6 thành viên của hội đồng cấp cơ sở ở lần đánh giá cuối cùng đồng ý thông \nqua (ghi trong phiếu nhận xét luận án). \nđ) Trong vòng 20 ngày ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "2 \n \n \nưu hóa thời gian đào tạo cho người học. CTĐT tích hợp cử nhân-kỹ sư, cử nhân-thạc sĩ có \nthời gian thiết kế là 5,5 năm và khối lượng học tập 180 TC. CTĐT tích hợp bao gồm hai \nbậc trình độ: Cử nhân (thời gian đào tạo 4 năm, trình độ ",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "75 điểm trở lên theo ngành đào tạo; hoặc tác giả \nchính của tối thiểu 2 bài báo về kết quả nghiên cứu của luận án đăng trên tạp chí khoa học \nquốc tế có phản biện được hội đồng giáo sư Nhà nước quy định khung điểm 0,75 điểm trở \nlên theo ng",
+            "scope": "shared",
+            "page_label": "30",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.5,
+        "notes": ""
+      },
+      {
+        "id": "R2021-12",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "medium",
+        "query": "Trong QCDT 2021, Điều 16 nói về việc nghỉ học hay thôi học như thế nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 6.06,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian đăn g ký lớp kết thúc chậm nhất 1 \ntuần trước khi bắt đầu học kỳ.  \n3. Đối với các học phần được giảng dạy trên lớp, quy  mô lớp học phần tối thiểu \nlà 20 học viên. Các trường  hợp ngoại lệ  được Trường ĐHBK Hà Nội  giải quyết the",
+            "scope": "shared",
+            "page_label": "20",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nSố:                 /QĐ-ĐHBK   Hà Nội, ngày        tháng      năm 2025 \n \nQUYẾT ĐỊNH \nVề việc ban hành Quy chế ",
+            "scope": "shared",
+            "page_label": "1",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "3. Đối với trường hợp xin nghỉ học tạm thời vì những lý do khác với lý do tại khoản \n1 và khoản 2 Điều này, học viên phải học ít nhất một học kỳ tại ĐHBK Hà Nội, không \nthuộc các trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật, mới",
+            "scope": "shared",
+            "page_label": "26",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "3 \n \n \n8. Các CTĐT cấp bằng cử nhân, kỹ sư, thạc sĩ, tiến sĩ được công bố công khai trước \nkhi tuyển sinh, phù hợp với các quy định hiện hành của Bộ GDĐT và chuẩn CTĐT của \nĐHBK Hà Nội. \n9. CTĐT có thể được điều chỉnh và áp dụng cho từng kh",
+            "scope": "shared",
+            "page_label": "7",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian \nnghỉ học tối đa  cho phép là 4 học kỳ chính và được tính  vào thời gian học chậm tiến \nđộ. \nđ) Sinh viên phải nộp đơn  đề nghị trở lại học chậm  nhất 1 tuần trước khi bắ t đầu \nhọc kỳ mới. Đối với trường hợp được điều động  vào l",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2021-13",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "medium",
+        "query": "Điều 17 trong mục lục QCDT 2021 đề cập đến việc chuyển đổi gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.04,
+        "retrieval_latency_ms": 5.18,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Tính \ntích hợp được thể h iện bằng việc thiết kế các môđun học phần trong chương trình cử \nnhân có kiến thức nền tảng liên quan chặt chẽ đến các chuyên ngành kỹ sư. \n4. Chương trình ELITECH (từ viết tắt củ a cụm từ Elite Technology Program)",
+            "scope": "shared",
+            "page_label": "4",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "2 \n \n \nưu hóa thời gian đào tạo cho người học. CTĐT tích hợp cử nhân-kỹ sư, cử nhân-thạc sĩ có \nthời gian thiết kế là 5,5 năm và khối lượng học tập 180 TC. CTĐT tích hợp bao gồm hai \nbậc trình độ: Cử nhân (thời gian đào tạo 4 năm, trình độ ",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "7 \n \n4. Sinh viên, học viên có đơn đề nghị thôi học, nghỉ học tạm thời hoặc chuyển cơ \nsở đào tạo trong khoảng thời gian 7 tuần kể từ k hi hết thời hạn điều chỉnh đăng ký lớp \ncủa học kỳ, nếu được giải quyết theo nguyện vọng thì đóng một nử",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "15 \n \nĐiều 22. Đồ án tốt nghiệp kỹ sư \n1. Học viên được giao đề tài Đồ á n tốt nghiệp kỹ sư (sau đây gọi tắt là ĐATN \nKS) nếu có tổn g số tín chỉ chưa đạt không vượt qu á 8 TC so với yêu cầu của chương \ntrình đào tạo (không tính số tín chỉ ",
+            "scope": "shared",
+            "page_label": "18",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "13 \n \n \n5. Tự nguyện thôi học: Sinh viên thấy không có đủ điều kiện hoặc không muốn tiếp \ntục học tại ĐHBK Hà Nội có thể làm đơn đề nghị thôi học và được xem xét cho thôi học. \nSinh viên đã có quyết định cho thôi học không được tiếp nhận tr",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2021-14",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "QCDT 2021 có Điều 18 về học cùng lúc hai chương trình không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 4.81,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian theo kế hoạch học tập chuẩn toàn khoá đối với hình thức đào tạo vừa \nlàm vừa h ọc dài h ơn tối t hiểu 20% so với hình thức đào tạo chính quy của cùng \nchương trình đào tạo. \n7. Các CTĐT cấp bằng cử nhân, kỹ sư, thạc sĩ, tiến sĩ đư",
+            "scope": "shared",
+            "page_label": "5",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "14 \n \n2. Hạn chế khối lượng họ c tập là hình thức buộc những sinh v iên đang bị cảnh \nbáo học tập hoặc chưa đạt chuẩn ngoại ngữ đăng ký số tín chỉ học p hần ít hơn bình \nthường, cụ thể như sau: \na) Sinh viên thuộc các chương trình đào  tạo ",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Sinh viên thi hộ hoặc nhờ  người thi hộ đều bị kỷ luật ở mức đình chỉ  học tập \n01 năm đối với trường hợp vi  phạm lần thứ nhất và buộc t hôi học đối với trường hợp \nvi phạm lần thứ hai. \n3. Sinh viên sử dụng chứng chỉ ngoại ngữ giả hoặc",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Chương trình đào tạo (sau đây gọi tắt là CTĐT) được xây dựng theo đơn vị tín \nchỉ (TC) và là bản thiết kế cho toàn bộ quá trình đào tạ o của một ngành. Chương trình \nthể hiện rõ trình độ đào tạo; đố i tượng đào tạo, điều kiện nhập học và",
+            "scope": "shared",
+            "page_label": "4",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 1,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 1.0,
+        "notes": ""
+      },
+      {
+        "id": "R2021-15",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "Điều 19 của QCDT 2021 nói về hình thức cảnh báo nào?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 5.61,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "13 \n \n \n5. Tự nguyện thôi học: Sinh viên thấy không có đủ điều kiện hoặc không muốn tiếp \ntục học tại ĐHBK Hà Nội có thể làm đơn đề nghị thôi học và được xem xét cho thôi học. \nSinh viên đã có quyết định cho thôi học không được tiếp nhận tr",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "27 \n \n \nđủ 90 ngày tính đến thời điểm kết thúc thời gian học tập chương trình tiến sĩ quy định tại \nkhoản 3 Điều 3 Quy chế này. Trong trường hợp không đủ thời gian 90 ngày, NCS phải làm \nthủ tục xin gia hạn thời gian học tập theo quy định. ",
+            "scope": "shared",
+            "page_label": "31",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "19 \n \nnước ngoài, hoặc bằng tốt nghiệp trình độ đại học trở lên ngàn h khác mà chương trình \nđược thực hiện hoàn toàn bằng ngôn ngữ nước ngoài;  \n3. Điểm trung bình tích lũy (CPA) đạt từ 2,0 trở lên; \n4. Người hướng dẫn và các phản biện xác",
+            "scope": "shared",
+            "page_label": "22",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "21 \n \n \nhoàn toàn bằng ngôn ngữ nước ngoài. Yêu cầu ngoại ngữ đầu vào và ngoại ngữ đầu ra phải \ncùng một ngôn ngữ. \n3. Người hướng dẫn và phản biện xác nhận bản thảo luận văn đã đáp ứng đầy đủ các \nyêu cầu về chất lượng và nội dung khoa học",
+            "scope": "shared",
+            "page_label": "25",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "b) Sinh viên bị  Hội đồng kỷ lu ật của Trường  ĐHBK Hà Nội  đề nghị áp dụn g \nmức kỷ luật từ cảnh cáo trở lên. \nĐiều 16. Nghỉ học tạm thời và tự nguyện thôi học  \n1. Điều kiện nghỉ học tạm thời, thời gian nghỉ học t ối đa và việc tiếp nhận ",
+            "scope": "shared",
+            "page_label": "14",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.3333333333333333,
+        "notes": ""
+      },
+      {
+        "id": "R2021-16",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "Trong QCDT 2021, Điều 20 nói về việc xử lý vi phạm đối với ai?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 5.39,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "BỘ GIÁO DỤC VÀ ĐÀO TẠO \nĐẠI HỌC BÁCH KHOA HÀ NỘI \nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM \nĐộc lập - Tự do - Hạnh phúc             \n \nQUY CHẾ ĐÀO TẠO \n(Ban hành kèm theo Quyết định số                 /QĐ-ĐHBK, ngày        tháng        năm 2025 \n",
+            "scope": "shared",
+            "page_label": "5",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "b) Đăng ký lớp chính thức: sinh viên chọn lớp học cho những học phần đã đăng ký. \nĐối với các học phần có nhiều lớp thành phần (lớp lý thuyết, bài tập, thực hành, thí \nnghiệm..), sinh viên phải đăng ký đủ các lớp thành phần theo yêu cầu.  \n",
+            "scope": "shared",
+            "page_label": "12",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "2. Sinh viên thi hộ hoặc nhờ  người thi hộ đều bị kỷ luật ở mức đình chỉ  học tập \n01 năm đối với trường hợp vi  phạm lần thứ nhất và buộc t hôi học đối với trường hợp \nvi phạm lần thứ hai. \n3. Sinh viên sử dụng chứng chỉ ngoại ngữ giả hoặc",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 48. Hiệu lực thi hành \n1. Quy chế này có hiệu lực thi hành từ học kỳ 1 năm học 2025-2026 và thay thế Quy \nchế đào tạo ban hành theo Quyết định số 4600/QĐ-ĐHBK ngày 09 tháng 6 năm 2023 của \nGiám đốc ĐHBK Hà Nội. \n2. Quy chế này được áp ",
+            "scope": "shared",
+            "page_label": "34",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Quy định này không xét \ntới số TC của các học phần học cải thiện điểm; \nb) Học viên đã chịu mức kỷ luật từ cảnh cáo trở lên trong giai đoạn học CTĐT kỹ sư. \nĐiều 25. Nghỉ học tạm thời, tự nguyện thôi học và buộc thôi học \n1. Đối với học viê",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.3333333333333333,
+        "notes": ""
+      },
+      {
+        "id": "R2021-17",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "easy",
+        "query": "QCDT 2021 có chương về đào tạo kỹ sư không?",
+        "expected_route": "retrieval",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 1,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 4.48,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "16 \n \n \nCHƯƠNG III \nĐÀO TẠO KỸ SƯ \nĐiều 21. Đăng ký học tập chương trình kỹ sư \n1. Đăng ký học phần: học viên thực hiện quy trình đăng ký học tập theo kế hoạch học \ntập chuẩn hoặc theo kế hoạch cá nhân. Học viên có thể đăng ký tối thiểu 12 ",
+            "scope": "shared",
+            "page_label": "20",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Hội nghị Sinh viên NCKH năm học 2024-2025\nThời gian: 08:00, ngày 17/05/2025 (Thứ Bảy)\nĐịa điểm: C7-219\n\n\n\n\n\n\n\n\nĐào tạo Đại học\nXem thêm +\nCác chuyên ngành đào tạo đại học tại Viện Toán ứng dụng và Tin học – ĐH Bách Khoa HN14/03/2024Giới thi",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "Thời gian chậm tiến độ khôn g được vượt quá 3 học kỳ và \nkhông vượt quá 2 lần thời gian thiết kế để hoàn thành khóa học.  \nc) Thời gian đào tạo chuẩn của trình độ tiến sĩ từ 03 năm đến 0 4 năm. Nế u \nnghiên cứu sinh (NCS) đăng ký học tập, n",
+            "scope": "shared",
+            "page_label": "6",
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Tuyển Dụng Fresher R&D – ATS\n\n10/06/2024\n\n\n\nTổng công ty viễn thông Viettel tuyển dụng Kỹ sư vận hành và phát triển\n\n15/04/2024\n\n\nXem thêm +\n\n\n\n\n\n\n\n\n\n\n\n\n\n95%Sinh viên tốt nghiệpcó việc ngay\n\n\n\n\n\n\n\n1200+Sinh viên\n\n\n\n\n\n\n\n10+Chương trình đào t",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          },
+          {
+            "source": "",
+            "score": 0.0,
+            "text_preview": "Tuyển sinh \n\nGiới thiệu về Khoa\nGiới thiệu tuyển sinh đại học\nMột số câu hỏi thường gặp\nĐặt câu hỏi\nTuyển sinh sau đại học\n\n\nSinh viên&Học viên \n\nLiên chi Đoàn\nLiên chi Hội\nSinh viên tiêu biểu\nNghiên cứu khoa học sinh viên\nHọc viên cao học\n",
+            "scope": "shared",
+            "page_label": null,
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 1,
+        "hit_at_5": 1,
+        "mrr": 0.3333333333333333,
+        "notes": ""
+      },
+      {
+        "id": "R2021-18",
+        "tenant_id": "01",
+        "category": "regulation_2021",
+        "difficulty": "hard",
+        "query": "Điều 21 trong QCDT 2021 thuộc chương nào và nói về nội dung gì?",
+        "expected_route": "retrieval",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 0,
+        "route_latency_ms": 1395.01,
+        "retrieval_latency_ms": 5.14,
+        "relevant_sources": [
+          "QCDT-2021-upload.pdf"
+        ],
+        "results": [
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "13 \n \n \n5. Tự nguyện thôi học: Sinh viên thấy không có đủ điều kiện hoặc không muốn tiếp \ntục học tại ĐHBK Hà Nội có thể làm đơn đề nghị thôi học và được xem xét cho thôi học. \nSinh viên đã có quyết định cho thôi học không được tiếp nhận tr",
+            "scope": "shared",
+            "page_label": "17",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Sinh viên \nthuộc diện này sẽ bị xét buộc thôi học nếu nghỉ quá 04 học kỳ chính. \nđ) Sinh viên phải nộp đơn đề nghị tiếp nhận trở lại học chậm nhất 1 tuần trước khi \nbắt đầu học kỳ mới. Đối với trường hợp được điều động vào lực lượng vũ tran",
+            "scope": "shared",
+            "page_label": "16",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Các trường \nhợp đặc biệt sẽ do Giám đốc ĐHBK Hà Nội quyết định. \n3. Đối với trường hợp xin nghỉ học tạm thời vì những lý do khác với lý do tại khoản \n1 và khoản 2 Điều này thì thời gian nghỉ học tối đa cho phép là 02 học kỳ chính và được \nt",
+            "scope": "shared",
+            "page_label": "21",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT-2021-upload.pdf",
+            "score": 0.0,
+            "text_preview": "c) Điểm R: điểm học phần được miễn học và công nhận tín chỉ. \nd) Điểm P: áp dụng cho các học phần chỉ yêu cầu đạt, không tính vào đ iểm trung \nbình học tập. \nđ) Điểm W: điểm học phần đã rút đăng ký học phần trong thời gian quy định. \ne) Điể",
+            "scope": "shared",
+            "page_label": "8",
+            "sheet_name": null
+          },
+          {
+            "source": "QCDT_2025_5445_QD-DHBK.pdf",
+            "score": 0.0,
+            "text_preview": "Điều 6. Hoãn thi, miễn thi, phúc tra và khiếu nại điểm \n1. Người học được thi cuối kỳ một lần đối với mỗi học phần đã đăng ký học trong \nhọc kỳ (kể cả trường hợp có điểm quá trình là điểm liệt) và không có lần thi lại.  \n2. Người học không ",
+            "scope": "shared",
+            "page_label": "10",
+            "sheet_name": null
+          }
+        ],
+        "hit_at_1": 0,
+        "hit_at_3": 0,
+        "hit_at_5": 1,
+        "mrr": 0.25,
+        "notes": ""
+      },
+      {
+        "id": "TKB-01",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "File TKB20252-FULL.xlsx là thời khóa biểu của kỳ nào?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1409.72,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-02",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Thời khóa biểu TKB20252-FULL.xlsx được cập nhật ngày nào?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1394.28,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-03",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Sheet đầu tiên trong file TKB20252-FULL.xlsx tên là gì?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1396.34,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-04",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Trong file thời khóa biểu có cột nào dùng để lưu mã học phần?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1571.19,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-05",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Mã học phần AC2030 có tên môn là gì trong TKB20252-FULL.xlsx?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1395.05,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-06",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "medium",
+        "query": "Tên tiếng Anh của học phần AC2030 là gì?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 0,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-07",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "medium",
+        "query": "Có bao nhiêu lớp AC2030 xuất hiện trong các dòng đầu của file thời khóa biểu?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1424.75,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-08",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Lớp AC2030 mã 169991 học vào thứ mấy?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1393.63,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-09",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Lớp AC2030 mã 169991 học ở phòng nào?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Không rõ → fallback sang retrieval để đảm bảo recall.",
+        "route_correct": 0,
+        "route_latency_ms": 0.22,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-10",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Lớp AC2030 mã 169992 có khung thời gian nào?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Không rõ → fallback sang retrieval để đảm bảo recall.",
+        "route_correct": 0,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-11",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Mã học phần AC2040E có tên môn là gì?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1553.79,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-12",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "medium",
+        "query": "Học phần AC2040E được mở cho chương trình nào theo ghi chú?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 0,
+        "route_latency_ms": 0.03,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-13",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Môn AC2050 có tên tiếng Anh là gì?",
+        "expected_route": "tool",
+        "predicted_route": "tool",
+        "route_reason": "Khớp tool trực tiếp.",
+        "route_correct": 1,
+        "route_latency_ms": 1390.32,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-14",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "AC2050 học vào buổi nào trong các dòng đầu của bảng?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Không rõ → fallback sang retrieval để đảm bảo recall.",
+        "route_correct": 0,
+        "route_latency_ms": 0.05,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-15",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Học phần AC2060 có tên tiếng Việt là gì?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 0,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-16",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "medium",
+        "query": "Trong các dòng mẫu, AC2060 có mấy nhóm lớp?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Không rõ → fallback sang retrieval để đảm bảo recall.",
+        "route_correct": 0,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-17",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "easy",
+        "query": "Lớp AC2060 mã 169994 học phòng nào?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Không rõ → fallback sang retrieval để đảm bảo recall.",
+        "route_correct": 0,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      },
+      {
+        "id": "TKB-18",
+        "tenant_id": "default",
+        "category": "timetable_20252",
+        "difficulty": "medium",
+        "query": "Học phần AC2070 có yêu cầu thực hành thí nghiệm không?",
+        "expected_route": "tool",
+        "predicted_route": "retrieval",
+        "route_reason": "Phát hiện từ khóa/tài liệu nội bộ → dùng retrieval.",
+        "route_correct": 0,
+        "route_latency_ms": 0.02,
+        "retrieval_latency_ms": 0.0,
+        "relevant_sources": [],
+        "results": [],
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "mrr": null,
+        "notes": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+\section{Implementation Details}
+
+\subsection{System Components}
+
+The system is implemented using a modular architecture, where each component is responsible for a specific function in the query processing pipeline.
+
+The main components include:
+\begin{itemize}
+    \item \textbf{Router module:} Determines the execution path for each query.
+    \item \textbf{Workflow manager:} Orchestrates the end-to-end processing pipeline.
+    \item \textbf{Retrieval module:} Handles tenant-scoped vector-based similarity search.
+    \item \textbf{LLM service:} Manages inference using the shared base model.
+    \item \textbf{Memory store:} Maintains tenant-specific data and context.
+    \item \textbf{Tool module:} Processes structured data queries (e.g., Excel, CSV).
+\end{itemize}
+
+This modular design improves flexibility, scalability, and maintainability of the system.
+
+\subsection{Multi-tenant Design}
+
+Each tenant in the system is associated with:
+\begin{itemize}
+    \item A unique tenant identifier
+    \item An isolated knowledge base
+    \item An isolated memory context
+    \item An optional LoRA personalization adapter
+\end{itemize}
+
+The system ensures strict isolation between tenants by:
+\begin{itemize}
+    \item Separating vector database partitions
+    \item Maintaining independent memory contexts
+    \item Routing queries based on tenant identifiers
+\end{itemize}
+
+At the same time, all tenants share a single base model, enabling efficient resource utilization.
+
+\subsection{Routing Optimization}
+
+The routing mechanism is designed to reduce unnecessary computational overhead and to better align execution cost with query requirements.
+
+Instead of processing all queries through the LLM, the system dynamically selects the most efficient execution path:
+
+\begin{itemize}
+    \item \textbf{Tool-based processing:} For structured data queries such as Excel or CSV
+    \item \textbf{Retrieval-based generation:} For document-based queries (e.g., PDF)
+    \item \textbf{Direct LLM inference:} For general queries
+\end{itemize}
+
+This approach reduces inference latency and token usage by avoiding a uniform pipeline for all requests.
+
+\subsection{Resource Optimization Strategy}
+
+The system incorporates multiple techniques to optimize resource usage:
+
+\begin{itemize}
+    \item \textbf{Shared model architecture:} A single base LLM serves all tenants
+    \item \textbf{Dynamic adapter loading:} Tenant-specific LoRA adapters are loaded on demand
+    \item \textbf{Selective LLM invocation:} Retrieval and full generation are used only when justified by the route decision
+\end{itemize}
+
+These strategies reduce memory footprint and improve scalability in cloud environments.

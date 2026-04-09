@@ -1,0 +1,38 @@
+\section{Introduction}
+
+\subsection{Background and Motivation}
+
+\noindent Large language models (LLMs) are surging in adoption, assuming the role of enterprise assistants, document intelligence, customer support, and internal knowledge systems. In practice, these deployments rarely serve a single homogeneous workload. Instead, they must process heterogeneous requests ranging from general conversational questions to document-grounded queries and structured data operations. This heterogeneity becomes more challenging in multi-tenant environments, where multiple companies and organizations share the same serving infrastructure but still expect tenant-specific behavior, data isolation, and predictable performance.
+
+Many practical deployments still rely solely on a fixed inference pipeline for all requests. Although such a design is simple to implement, it is inefficient for enterprise workloads as different query types require different execution flows. Routing every request through the same expensive retrieval or generation process can lower response rates, waste compute resources, and blur the system-level trade-off between answer quality and serving efficiency.
+
+\subsection{Research Gaps in Multi-tenant LLM Serving}
+
+The first gap is an \textit{efficiency gap}. Existing one-path-fits-all pipelines do not distinguish well between simple queries, knowledge-grounded queries, and structured data queries. As a result, lightweight requests may still trigger retrieval, long-context prompting, or unnecessary model calls.
+
+The second gap is a \textit{personalization gap}. Multi-tenant applications often require tenant-specific language style, policies, and domain preferences. A straightforward solution is to maintain separate models for different tenants, but this quickly becomes impractical because full-model duplication increases memory cost and complicates system maintenance.
+
+The third gap is a \textit{multi-tenant systems gap}. A realistic serving system must jointly support tenant isolation, scalable resource sharing, and personalization under the same runtime. Many existing approaches optimize only one dimension, such as retrieval quality, adapter efficiency, or serving throughput, without addressing the interaction among routing, shared serving, and tenant-aware isolation in a unified architecture.
+
+\subsection{Adaptive Multi-Path Serving Architecture}
+
+To address these gaps, this paper frames the problem as adaptive multi-path serving for multi-tenant LLM systems. Rather than treating retrieval-augmented generation as the default identity of the system, we treat retrieval as one execution path among several possible paths. The proposed architecture selects between tool-based processing, retrieval-based generation, and direct generation based on query characteristics and tenant context.
+
+The system adopts a shared base model as the common serving backbone, which improves scalability and reduces memory usage compared with per-tenant model replication. To preserve tenant-specific behavior under shared serving constraints, we incorporate Parameter-Efficient Fine-Tuning (PEFT) through Low-Rank Adaptation (LoRA). In this design, LoRA is not merely an auxiliary personalization module; it is the practical mechanism that resolves the trade-off between shared-model efficiency and tenant-level customization.
+
+The runtime is tenant-aware by construction. Each tenant is associated with isolated knowledge storage, isolated conversational memory, and an optional personalization adapter. Tenant-specific LoRA adapters are loaded dynamically during inference so that the system can support customization without keeping all adapters resident in memory at the same time.
+
+\subsection{Scope and Contributions}
+
+The paper is positioned as a systems-and-application study on multi-tenant LLM serving. Its central claim is not that retrieval, tools, or LoRA are individually new, but that their coordinated integration yields a practical serving architecture for heterogeneous enterprise workloads.
+
+\subsection{Contributions}
+
+The main contributions of this work are summarized as follows:
+
+\begin{itemize}
+    \item We propose a unified adaptive multi-path serving architecture for heterogeneous multi-tenant LLM workloads, where queries are routed among tool, retrieval, and direct-generation paths.
+    \item We integrate shared-model serving with tenant-specific LoRA personalization to balance resource efficiency and customization without full-model duplication.
+    \item We introduce a tenant-aware runtime that combines isolated knowledge storage, isolated memory, and dynamic adapter loading for scalable multi-tenant deployment.
+    \item We evaluate the architecture using system-oriented metrics, including latency, memory usage, and response quality, to compare adaptive serving against fixed single-path baselines.
+\end{itemize}

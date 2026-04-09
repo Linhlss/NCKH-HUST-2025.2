@@ -1,0 +1,96 @@
+\documentclass{jstarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\rmdefault}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{gray},
+  stringstyle=\color{green!50!black},
+  breaklines=true,
+  frame=none,
+  backgroundcolor=\color{gray!5},
+  showstringspaces=false
+}
+
+% If you have long equations
+% \documentclass[mathindent=1ex]{jstarticle}
+
+% Which journal to submit to.
+% - "ssad": Smart Systems and Devices
+% - "etsd": Engineering and Technology for Sustainable Development
+% - "ds-ai": Data Science and Artificial Intelligence
+% Default is "ssad".
+\submitTo{ssad}
+
+% Manuscript title
+\title{Adaptive Multi-Path Inference for Multi-Tenant LLM Systems with Shared Models and LoRA-based Personalization}
+% Authors
+\author[1]{Tran Bui Tung Linh}
+\author[2]{Hoang Trung Kien}
+\author[3]{Nguyen Thanh Trung}
+\authornote{}{Faculty of Mathematics and Informatics, Hanoi University of Science and Technology, Ha Noi, Vietnam}
+
+\authornote{*}{Corresponding author email: linh.tbt227057@hust.edu.vn}
+
+% Abstract
+\begin{abstract}
+Enterprise LLM applications are increasingly being utilized in multi-tenant settings, specifically where heterogeneous queries from different organizations are funneled into shared infrastructures, while under a mandate to ensure both efficiency, isolation, and tenant-specific behavior. 
+In such environments, single-path inference pipelines often prove insufficient, as simple and complex requests are forced through the same expensive execution process. 
+This paper presents an adaptive multi-path inference architecture for multi-tenant LLM systems, capable of dynamically selecting among retrieval-based generation, tool-based processing for structured or semi-structured data, and direct generation according to query characteristics. 
+The system is built around a shared base model to elevate resource efficiency, while tenant-specific Low-Rank Adaptation (LoRA) modules support lightweight tenant-level customization without replicating the full model for each tenant.
+To support practical deployment, we further introduce a tenant-aware runtime with isolated knowledge stores, isolated conversational memory, and dynamic adapter loading to reduce memory overhead during inference. 
+The proposed design positions retrieval and tools as execution paths within a broader serving architecture rather than as the defining identity of the system. 
+Experimental evaluation in a multi-tenant setting shows that the architecture improves latency and memory efficiency over fixed single-path baselines while maintaining competitive response quality. 
+These results suggest that adaptive multi-path inference, combined with shared-model serving and LoRA-based personalization, is a promising design paradigm for scalable and cost-efficient enterprise LLM systems.
+\end{abstract}
+
+% Keywords
+\keyword{Multi-tenant LLM systems}
+\keyword{Adaptive inference}
+\keyword{LoRA personalization}
+\keyword{Resource efficiency}
+
+% Bibliography
+% \usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{refs.bib}
+
+% Other settings
+% These settings are document specific.
+\usepackage{tabularray}
+
+\usepackage{xcolor}
+\definecolor{customgray}{gray}{0.9}
+\usepackage{tabularx}
+
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+\let\Code\lstinline
+
+\usepackage{prettyref}
+\newrefformat{fig}{Fig.\,\ref{#1}}
+\newrefformat{tab}{Table.\,\ref{#1}}
+\newrefformat{sec}{Section \ref{#1}}
+\newrefformat{subsec}{Section \ref{#1}}
+\newrefformat{subsubsec}{Section \ref{#1}}
+
+\begin{document}
+
+\maketitle
+
+\input{Cac-Phan-tex/Phan-1.tex}
+\input{Cac-Phan-tex/Phan-2.tex}
+\input{Cac-Phan-tex/Phan-3.tex}
+\input{Cac-Phan-tex/Phan-4.tex}
+\input{Cac-Phan-tex/Phan-5.tex}
+% Acknowledgments and references will be added in the final submission version.
+% \input{Cac-Phan-tex/Phan-6.tex}
+% \input{Cac-Phan-tex/Phan-7.tex}
+% \printbibliography[heading=none]
+% \printbibliography
+\end{document}
